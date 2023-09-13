@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../assets/logo.png';
+import logo from "../assets/univ_logo.png";
 
 const FooterWrapper = styled.div`
     background-color: #FFFFFF;
