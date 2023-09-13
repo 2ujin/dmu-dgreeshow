@@ -27,6 +27,7 @@ const Text = styled.div`
 `;
 
 const Header = () => {
+  console.log("hello");
   return (
     <HeaderWrapper>
       <Logo src={logo} />
