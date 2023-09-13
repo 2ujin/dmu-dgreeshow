@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import logo from "../assets/logo.svg";
+import SubHeader from "./subHeader";
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const _Header = styled.div`
 const Logo = styled.img``;
 
 const Space = styled.div`
-  width: 150px;
+  width: 100px;
 `;
 
 const Text = styled.div`
@@ -27,18 +28,18 @@ const Text = styled.div`
 `;
 
 const Header = () => {
-  console.log("hello");
   return (
     <HeaderWrapper>
       <Logo src={logo} />
       <_Header>
-        <Text>Home</Text>
+        <Text>HOME</Text>
         <Text>INTRO</Text>
         <Text>PROFILE</Text>
         <Text>PROJECT</Text>
         <Text>EVENT</Text>
       </_Header>
-      <Space></Space>
+      <Space>ㅤ</Space>
+      <SubHeader />
     </HeaderWrapper>
   );
 };
