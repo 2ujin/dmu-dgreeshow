@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/yisol-dmu-gx/static/css/main.e6c13ad2.css",
-    "main.js": "/yisol-dmu-gx/static/js/main.5578ad5f.js",
+    "main.css": "/yisol-dmu-gx/static/css/main.42c386ef.css",
+    "main.js": "/yisol-dmu-gx/static/js/main.fd5d2dc4.js",
     "static/js/787.a42ef725.chunk.js": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js",
     "static/media/logo.svg": "/yisol-dmu-gx/static/media/logo.48477a91b970d049e580892c8803c707.svg",
     "index.html": "/yisol-dmu-gx/index.html",
-    "main.e6c13ad2.css.map": "/yisol-dmu-gx/static/css/main.e6c13ad2.css.map",
-    "main.5578ad5f.js.map": "/yisol-dmu-gx/static/js/main.5578ad5f.js.map",
+    "main.42c386ef.css.map": "/yisol-dmu-gx/static/css/main.42c386ef.css.map",
+    "main.fd5d2dc4.js.map": "/yisol-dmu-gx/static/js/main.fd5d2dc4.js.map",
     "787.a42ef725.chunk.js.map": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.5578ad5f.js"
+    "static/css/main.42c386ef.css",
+    "static/js/main.fd5d2dc4.js"
   ]
 }
