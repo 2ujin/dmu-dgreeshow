@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import SubHeader from "./subHeader";
+import { NavLink } from "react-router-dom";
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -24,16 +26,13 @@ const Space = styled.div`
   width: 100px;
 `;
 
-const Text = styled.div`
-  font-size: 12px;
-  &:hover {
-    font-size: 12px;
-    color: #984678;
-  }
-`;
+const Text = styled.div``;
 
 const Header = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const location = useLocation();
+  let path = location?.pathname;
+  console.log(path);
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -45,17 +44,54 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <Logo src={logo} />
+      <Link to="/">
+        <Logo src={logo} />
+      </Link>
 
       <_Header>
-        <Text>HOME</Text>
-        <Text>INTRO</Text>
-        <Text>PROFILE</Text>
-        <Text onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <span>PROJECT</span>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "header-text"
+          }
+          to="/"
+        >
+          HOME
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "header-text"
+          }
+          to="/intro"
+        >
+          INTRO
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "header-text"
+          }
+          to="/profile"
+        >
+          PROFILE
+        </NavLink>
+        <NavLink
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={({ isActive }) =>
+            isActive ? "link-active" : "header-text"
+          }
+          to="/project"
+        >
+          PROJECT
           {isDropdownVisible && <SubHeader />}
-        </Text>
-        <Text>EVENT</Text>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "header-text"
+          }
+          to="/event"
+        >
+          EVENT
+        </NavLink>
       </_Header>
       <Space>ㅤ</Space>
     </HeaderWrapper>

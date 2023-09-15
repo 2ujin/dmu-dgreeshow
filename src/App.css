@@ -35,5 +35,18 @@ li:hover {
   padding: 10px 20px;
   border-radius: 9px;
   line-height: 35px; 
+}
 
+.header-text {
+  font-size: 12px;
+}
+
+.header-text:hover {
+  font-size: 12px;
+  color: #984678;
+}
+
+.link-active {
+  font-size: 12px;
+  color: #984678;
 }
