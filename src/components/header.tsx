@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import SubHeader from "./subHeader";
@@ -11,6 +11,10 @@ const HeaderWrapper = styled.div`
   justify-content: space-around;
   background-color: #ffffff;
   padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
 const _Header = styled.div`
@@ -26,13 +30,8 @@ const Space = styled.div`
   width: 100px;
 `;
 
-const Text = styled.div``;
-
 const Header = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const location = useLocation();
-  let path = location?.pathname;
-  console.log(path);
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);

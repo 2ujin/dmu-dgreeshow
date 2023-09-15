@@ -12,10 +12,12 @@ const HomeWrapper = styled.div`
 `
 
 const Home = () => {
-  return <HomeWrapper>
-    <Header/>
-    <Footer />
-  </HomeWrapper>;
+  return (
+    <HomeWrapper>
+      <Header />
+      {/* <Footer /> */}
+    </HomeWrapper>
+  );
 };
 
 export default Home;

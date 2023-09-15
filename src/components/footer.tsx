@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import logo from "../assets/univ_logo.png";
 
 const FooterWrapper = styled.div`
-    background-color: #FFFFFF;
-    padding: 25px 35px;
+  background-color: #ffffff;
+  padding: 25px 35px;
+  height: 100px;
 `;
 
 const TextWrapper = styled.div`
