@@ -41,7 +41,6 @@ const Home = () => {
           height="90%"
           loop={true}
           muted
-          className={"video"}
         />
         <Img src={Ex1} />
         <Img src={Ex2} />
