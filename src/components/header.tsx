@@ -15,6 +15,7 @@ const HeaderWrapper = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  margin-bottom: 100px;
 `;
 
 const _Header = styled.div`

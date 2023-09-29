@@ -25,7 +25,6 @@ const Wrapper = styled.div`
   width: 100%;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100px;
 `;
 
 const Home = () => {
@@ -37,11 +36,12 @@ const Home = () => {
       <Wrapper>
         <ReactPlayer
           playing
-          url={`${process.env.PUBLIC_URL}/video/intro.mp4`}
+          url={`${process.env.PUBLIC_URL}/video/test.mp4`}
           width="100%"
-          height="100%"
+          height="90%"
           loop={true}
           muted
+          className={"video"}
         />
         <Img src={Ex1} />
         <Img src={Ex2} />
