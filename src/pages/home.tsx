@@ -37,8 +37,8 @@ const Home = () => {
         <ReactPlayer
           playing
           url={`${process.env.PUBLIC_URL}/video/intro.mp4`}
-          width="80%"
-          height="90%"
+          width="100%"
+          height="80%"
           loop={true}
           muted
           className={"video"}
