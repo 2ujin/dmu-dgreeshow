@@ -10,12 +10,11 @@ const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  margin-bottom: 100px;
 `;
 
 const _Header = styled.div`
@@ -49,14 +48,14 @@ const Header = () => {
       </Link>
 
       <_Header>
-        {/* <NavLink
+        <NavLink
           className={({ isActive }) =>
             isActive ? "link-active" : "header-text"
           }
           to="/"
         >
           HOME
-        </NavLink> */}
+        </NavLink>
         <NavLink
           className={({ isActive }) =>
             isActive ? "link-active" : "header-text"
