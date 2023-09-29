@@ -49,14 +49,14 @@ const Header = () => {
       </Link>
 
       <_Header>
-        <NavLink
+        {/* <NavLink
           className={({ isActive }) =>
             isActive ? "link-active" : "header-text"
           }
           to="/"
         >
           HOME
-        </NavLink>
+        </NavLink> */}
         <NavLink
           className={({ isActive }) =>
             isActive ? "link-active" : "header-text"
