@@ -36,7 +36,7 @@ const Home = () => {
       <Wrapper>
         <ReactPlayer
           playing
-          url={`${process.env.PUBLIC_URL}/video/test2.mp4`}
+          url={`${process.env.PUBLIC_URL}/video/intro2.mp4`}
           width="100%"
           height="90%"
           loop={true}
