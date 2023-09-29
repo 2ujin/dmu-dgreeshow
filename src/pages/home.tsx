@@ -38,7 +38,7 @@ const Home = () => {
           playing
           url={`${process.env.PUBLIC_URL}/video/intro.mp4`}
           width="100%"
-          height="80%"
+          height="50%"
           loop={true}
           muted
           className={"video"}
