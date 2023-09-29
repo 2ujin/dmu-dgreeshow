@@ -16,6 +16,14 @@ const HomeWrapper = styled.div`
 `;
 const Img = styled.img`
   margin-top: 100px;
+  width: 80%;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Home = () => {
@@ -23,10 +31,12 @@ const Home = () => {
     <HomeWrapper>
       <Header />
       {/* <Footer /> */}
-      <Img src={Ex1} />
-      <Img src={Ex2} />
-      <Img src={Ex3} />
-      <Img src={Ex4} />
+      <Wrapper>
+        <Img src={Ex1} />
+        <Img src={Ex2} />
+        <Img src={Ex3} />
+        <Img src={Ex4} />
+      </Wrapper>
     </HomeWrapper>
   );
 };
