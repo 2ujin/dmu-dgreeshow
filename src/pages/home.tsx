@@ -36,14 +36,18 @@ const Home = () => {
   const [isHoveredRight, setIsHoveredRight] = useState(false);
 
   const changeLeftLineStyle = () => {
-    const box2_left: any = document.querySelector(".box2-line-left");
-    const box2_right: any = document.querySelector(".box2-line-bottom");
     const box1_right: any = document.querySelector(".box1-line-right");
     const box1_bottom: any = document.querySelector(".box1-line-bottom");
-    box2_left.style.height = isHoveredLeft ? "50%" : "100%";
-    box2_right.style.height = isHoveredLeft ? "50%" : "100%";
+    const box2_left: any = document.querySelector(".box2-line-left");
+    const box2_right: any = document.querySelector(".box2-line-bottom");
+    const box3_top: any = document.querySelector(".box3-line-top");
+    const box3_right: any = document.querySelector(".box3-line-right");
     box1_right.style.width = isHoveredLeft ? "50%" : "100%";
     box1_bottom.style.height = isHoveredLeft ? "50%" : "100%";
+    box2_left.style.height = isHoveredLeft ? "50%" : "100%";
+    box2_right.style.height = isHoveredLeft ? "50%" : "100%";
+    box3_top.style.width = isHoveredLeft ? "50%" : "100%";
+    box3_right.style.height = isHoveredLeft ? "50%" : "100%";
   };
   const changeRightLineStyle = () => {
     const box9_left: any = document.querySelector(".box9-line-left");
@@ -77,7 +81,17 @@ const Home = () => {
               <div className="box1-line-bottom"></div>
             </div>
             <div className="box-left-wrapper">
-              <div className="box2">
+              <div
+                className={`box2 ${isHoveredLeft ? "hovered" : ""}`}
+                onMouseEnter={() => {
+                  setIsHoveredLeft(true);
+                  changeLeftLineStyle();
+                }}
+                onMouseLeave={() => {
+                  setIsHoveredLeft(false);
+                  changeLeftLineStyle();
+                }}
+              >
                 <div className="box2-line-top"></div>
                 <div className="box2-line-right"></div>
                 <div className="box2-line-left"></div>
