@@ -123,6 +123,15 @@ body {
   left: 0;
 }
 
+.box3-title{
+  position: absolute;
+  top: -25px;
+  color: #FFF;
+  font-family: SUIT;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .box3-line-top {
   position: absolute;
   right: 0;
@@ -149,7 +158,6 @@ body {
 }
 
 .box-right-wrapper {
-  background-color: aquamarine;
   position: absolute;
   width: 50%;
   top: 0;
@@ -175,6 +183,15 @@ body {
   border: 1px solid #FFF;
 }
 
+.box6-title {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  color: #FFF;
+  font-family: SUIT;
+  font-size: 18px;
+  font-weight: 600;
+}
 
 .box6-line-top {
   position: absolute;

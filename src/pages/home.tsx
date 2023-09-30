@@ -63,6 +63,7 @@ const Home = () => {
                 <div className="box2-line-bottom"></div>
               </div>
               <div className="box3">
+                <div className="box3-title">복합공간설계</div>
                 <div className="box3-line-top"></div>
                 <div className="box3-line-right"></div>
               </div>
@@ -71,6 +72,7 @@ const Home = () => {
             <div className="box-right-wrapper">
               <div className="box5"></div>
               <div className="box6">
+                <div className="box6-title">가구디자인</div>
                 <div className="box6-line-top"></div>
                 <div className="box6-line-right"></div>
               </div>
