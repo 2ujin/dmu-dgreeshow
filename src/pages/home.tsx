@@ -97,17 +97,7 @@ const Home = () => {
                 <div className="box2-line-left"></div>
                 <div className="box2-line-bottom"></div>
               </div>
-              <div
-                className={`box3 ${isHoveredLeft ? "hovered" : ""}`}
-                onMouseEnter={() => {
-                  setIsHoveredLeft(true);
-                  changeLeftLineStyle();
-                }}
-                onMouseLeave={() => {
-                  setIsHoveredLeft(false);
-                  changeLeftLineStyle();
-                }}
-              >
+              <div className={`box3 ${isHoveredLeft ? "hovered" : ""}`}>
                 <div className="box3-title">복합공간설계</div>
                 <div className="box3-line-top"></div>
                 <div className="box3-line-right"></div>
