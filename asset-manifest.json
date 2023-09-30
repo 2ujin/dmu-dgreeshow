@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/yisol-dmu-gx/static/css/main.680cf4b6.css",
-    "main.js": "/yisol-dmu-gx/static/js/main.e268dd77.js",
+    "main.css": "/yisol-dmu-gx/static/css/main.65564a94.css",
+    "main.js": "/yisol-dmu-gx/static/js/main.b2f09c33.js",
     "static/js/787.a42ef725.chunk.js": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js",
     "static/media/poster.png": "/yisol-dmu-gx/static/media/poster.a35ee7c3d500edf400bc.png",
     "static/media/logo.svg": "/yisol-dmu-gx/static/media/logo.48477a91b970d049e580892c8803c707.svg",
     "index.html": "/yisol-dmu-gx/index.html",
-    "main.680cf4b6.css.map": "/yisol-dmu-gx/static/css/main.680cf4b6.css.map",
-    "main.e268dd77.js.map": "/yisol-dmu-gx/static/js/main.e268dd77.js.map",
+    "main.65564a94.css.map": "/yisol-dmu-gx/static/css/main.65564a94.css.map",
+    "main.b2f09c33.js.map": "/yisol-dmu-gx/static/js/main.b2f09c33.js.map",
     "787.a42ef725.chunk.js.map": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.680cf4b6.css",
-    "static/js/main.e268dd77.js"
+    "static/css/main.65564a94.css",
+    "static/js/main.b2f09c33.js"
   ]
 }
