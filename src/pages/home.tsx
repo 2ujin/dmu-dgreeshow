@@ -7,6 +7,7 @@ import Header from "../components/header";
 // import Ex4 from "../assets/ex4.jpg";
 import ReactPlayer from "react-player";
 import Footer from "../components/footer";
+import { useState } from "react";
 
 const HomeWrapper = styled.div`
   height: 100vh;
@@ -31,6 +32,26 @@ const MenuWrapper = styled.div`
 `;
 
 const Home = () => {
+  const [isHoveredLeft, setIsHoveredLeft] = useState(false);
+  const [isHoveredRight, setIsHoveredRight] = useState(false);
+
+  const changeLeftLineStyle = () => {
+    const box2_left: any = document.querySelector(".box2-line-left");
+    const box2_right: any = document.querySelector(".box2-line-bottom");
+    const box1_right: any = document.querySelector(".box1-line-right");
+    const box1_bottom: any = document.querySelector(".box1-line-bottom");
+    box2_left.style.height = isHoveredLeft ? "50%" : "100%";
+    box2_right.style.height = isHoveredLeft ? "50%" : "100%";
+    box1_right.style.width = isHoveredLeft ? "50%" : "100%";
+    box1_bottom.style.height = isHoveredLeft ? "50%" : "100%";
+  };
+  const changeRightLineStyle = () => {
+    const box9_left: any = document.querySelector(".box9-line-left");
+    const box9_top: any = document.querySelector(".box9-line-top");
+    box9_left.style.height = isHoveredRight ? "50%" : "100%";
+    box9_top.style.width = isHoveredRight ? "50%" : "100%";
+  };
+
   return (
     <>
       <HomeWrapper>
@@ -62,7 +83,17 @@ const Home = () => {
                 <div className="box2-line-left"></div>
                 <div className="box2-line-bottom"></div>
               </div>
-              <div className="box3">
+              <div
+                className={`box3 ${isHoveredLeft ? "hovered" : ""}`}
+                onMouseEnter={() => {
+                  setIsHoveredLeft(true);
+                  changeLeftLineStyle();
+                }}
+                onMouseLeave={() => {
+                  setIsHoveredLeft(false);
+                  changeLeftLineStyle();
+                }}
+              >
                 <div className="box3-title">복합공간설계</div>
                 <div className="box3-line-top"></div>
                 <div className="box3-line-right"></div>
@@ -71,10 +102,22 @@ const Home = () => {
             </div>
             <div className="box-right-wrapper">
               <div className="box5"></div>
-              <div className="box6">
+              <div
+                className={`box6 ${isHoveredRight ? "hovered" : ""}`}
+                onMouseEnter={() => {
+                  setIsHoveredRight(true);
+                  changeRightLineStyle(); // 호버 시 스타일 변경 함수 호출
+                }}
+                onMouseLeave={() => {
+                  setIsHoveredRight(false);
+                  changeRightLineStyle(); // 호버 해제 시 스타일 변경 함수 호출
+                }}
+              >
                 <div className="box6-title">가구디자인</div>
                 <div className="box6-line-top"></div>
                 <div className="box6-line-right"></div>
+                <div className="box6-line-left"></div>
+                <div className="box6-line-bottom"></div>
               </div>
               <div className="box7"></div>
               <div className="box8"></div>
