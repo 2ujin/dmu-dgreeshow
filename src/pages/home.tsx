@@ -1,5 +1,5 @@
 
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Header from "../components/header";
 // import Ex1 from "../assets/ex1.jpg";
 // import Ex2 from "../assets/ex2.jpg";
@@ -7,7 +7,7 @@ import Header from "../components/header";
 // import Ex4 from "../assets/ex4.jpg";
 import ReactPlayer from "react-player";
 import Footer from "../components/footer";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const HomeWrapper = styled.div`
   height: 100vh;
@@ -31,29 +31,98 @@ const MenuWrapper = styled.div`
   height: 100vh;
 `;
 
+const frameInAnimation = keyframes`
+  0% {
+    font-size: 50px;
+  line-height: 125%;
+  }
+
+  100%{
+    font-size: 100px;
+    line-height: 125%;
+  }
+`;
+
+const Container = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-size: 1px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 125%;
+  font-size: 0px;
+  &.frame-in {
+    animation: ${frameInAnimation} 0.8s forwards;
+  }
+`;
+
 const Home = () => {
   const [isHoveredLeft, setIsHoveredLeft] = useState(false);
   const [isHoveredRight, setIsHoveredRight] = useState(false);
+  const [isInViewport, setIsInViewport] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) return; // 요소가 아직 준비되지 않은 경우 중단
+
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // 요소가 뷰포트에 나타났을 경우
+          setIsInViewport(true);
+        } else {
+          // 요소가 뷰포트를 벗어난 경우
+          setIsInViewport(false);
+        }
+      });
+    };
+
+    const options = { root: null, rootMargin: "0px", threshold: 0 };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(ref.current); // 요소 관찰 시작
+
+    return () => {
+      observer.disconnect(); // 컴포넌트 언마운트 시 관찰 중단
+    };
+  }, []);
 
   const changeLeftLineStyle = () => {
     const box1_right: any = document.querySelector(".box1-line-right");
     const box1_bottom: any = document.querySelector(".box1-line-bottom");
     const box2_left: any = document.querySelector(".box2-line-left");
     const box2_right: any = document.querySelector(".box2-line-bottom");
+    const box2_top: any = document.querySelector(".box2-line-top");
+    const box2_bottom: any = document.querySelector(".box2-line-right");
+    const box2_title: any = document.querySelector(".box2-title");
     const box3_top: any = document.querySelector(".box3-line-top");
     const box3_right: any = document.querySelector(".box3-line-right");
     box1_right.style.width = isHoveredLeft ? "50%" : "100%";
     box1_bottom.style.height = isHoveredLeft ? "50%" : "100%";
     box2_left.style.height = isHoveredLeft ? "50%" : "100%";
+    box2_left.style.bottom = isHoveredLeft ? "0" : "0";
     box2_right.style.height = isHoveredLeft ? "50%" : "100%";
+    box2_top.style.width = isHoveredLeft ? "210px" : "0";
     box3_top.style.width = isHoveredLeft ? "50%" : "100%";
     box3_right.style.height = isHoveredLeft ? "50%" : "100%";
+    box2_title.style.right = isHoveredLeft ? "0px" : "114px";
+    box2_bottom.style.width = isHoveredLeft ? "50%" : "0";
   };
   const changeRightLineStyle = () => {
     const box9_left: any = document.querySelector(".box9-line-left");
     const box9_top: any = document.querySelector(".box9-line-top");
+    const box6_title: any = document.querySelector(".box6-title");
+    const box6_top: any = document.querySelector(".box6-line-top");
+    const box6_right: any = document.querySelector(".box6-line-right");
     box9_left.style.height = isHoveredRight ? "50%" : "100%";
     box9_top.style.width = isHoveredRight ? "50%" : "100%";
+    box6_top.style.width = isHoveredRight ? "100%" : "0";
+    box6_title.style.right = isHoveredRight ? "0" : "125px";
+    box6_right.style.height = isHoveredRight ? "100%" : "0";
   };
 
   return (
@@ -75,7 +144,9 @@ const Home = () => {
 
         <MenuWrapper>
           <div className="box-wrapper">
-            <div className="title">MAIN PROJECT</div>
+            <Container className={isInViewport ? "frame-in" : ""} ref={ref}>
+              SPACE <br /> WITHIN <br /> SPACE
+            </Container>
             <div className="box1">
               <div className="box1-line-right"></div>
               <div className="box1-line-bottom"></div>
@@ -96,9 +167,9 @@ const Home = () => {
                 <div className="box2-line-right"></div>
                 <div className="box2-line-left"></div>
                 <div className="box2-line-bottom"></div>
+                <div className="box2-title">복합공간설계</div>
               </div>
               <div className={`box3 ${isHoveredLeft ? "hovered" : ""}`}>
-                <div className="box3-title">복합공간설계</div>
                 <div className="box3-line-top"></div>
                 <div className="box3-line-right"></div>
               </div>
