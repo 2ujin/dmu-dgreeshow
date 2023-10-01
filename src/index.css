@@ -299,4 +299,16 @@ body {
   transition:0.2s all; 
 }
 
+.poster-wrapper .box-wrapper {
+  position: relative;
+}
+
+.box-wrapper {
+  position: relative;
+  top: 0px;
+  right: 30px;
+  width: 1200px;
+  height: 100%;
+  z-index: 0;
+}
 
