@@ -1,10 +1,5 @@
-
 import styled, { keyframes } from "styled-components";
 import Header from "../components/header";
-// import Ex1 from "../assets/ex1.jpg";
-// import Ex2 from "../assets/ex2.jpg";
-// import Ex3 from "../assets/ex3.jpg";
-// import Ex4 from "../assets/ex4.jpg";
 import ReactPlayer from "react-player";
 import Footer from "../components/footer";
 import { useEffect, useRef, useState } from "react";
