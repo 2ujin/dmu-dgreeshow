@@ -112,7 +112,7 @@ const Intro = () => {
             <Line1 />
             <Line2 />
           </div>
-          <div className="box-wrapper">
+          <div className="box-wrapper-2">
             <Box src={box} />
             <Line3 />
             <Line4 />

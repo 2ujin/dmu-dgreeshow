@@ -28,7 +28,7 @@ const MenuWrapper = styled.div`
   /* padding: 60px 0px; */
   background: linear-gradient(251deg, #ba6c9e 22.05%, #f7bd96 75.22%);
   margin-top: -1px;
-  height: 100vh;
+  height: 1000px;
 `;
 
 const frameInAnimation = keyframes`

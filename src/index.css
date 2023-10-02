@@ -299,11 +299,11 @@ body {
   transition:0.2s all; 
 }
 
-.poster-wrapper .box-wrapper {
+.poster-wrapper .box-wrapper-2 {
   position: relative;
 }
 
-.box-wrapper {
+.box-wrapper-2 {
   position: relative;
   top: 0px;
   right: 30px;
