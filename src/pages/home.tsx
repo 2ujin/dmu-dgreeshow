@@ -99,11 +99,11 @@ const Home = () => {
     box2_left.style.height = isHoveredLeft ? "50%" : "100%";
     box2_left.style.bottom = isHoveredLeft ? "0" : "0";
     box2_right.style.height = isHoveredLeft ? "50%" : "100%";
-    box2_top.style.width = isHoveredLeft ? "210px" : "0";
+    box2_top.style.width = isHoveredLeft ? "210px" : "100%";
     box3_top.style.width = isHoveredLeft ? "50%" : "100%";
     box3_right.style.height = isHoveredLeft ? "50%" : "100%";
     box2_title.style.right = isHoveredLeft ? "0px" : "114px";
-    box2_bottom.style.width = isHoveredLeft ? "50%" : "0";
+    box2_bottom.style.width = isHoveredLeft ? "50%" : "100%";
   };
   const changeRightLineStyle = () => {
     const box9_left: any = document.querySelector(".box9-line-left");
