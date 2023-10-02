@@ -128,7 +128,7 @@ const Desc = styled.div`
   left: 25px;
 
   &.fade-in {
-    animation: ${frameInAnimation} 2s forwards;
+    animation: ${frameInAnimation} 1s forwards;
   }
 `;
 
