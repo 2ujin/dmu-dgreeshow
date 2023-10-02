@@ -7,9 +7,11 @@ import box2 from "../assets/box2.svg";
 import Typewriter from "../components/typingText";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
 import map from "../assets/map.png";
+import { useState, useEffect, useRef } from "react";
+import Typist from "react-typist";
 
 const ContentWrapper = styled.div`
-  height: 2600px;
+  height: 4000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,13 +24,16 @@ const ContentWrapper = styled.div`
 `;
 
 const Text = styled.div`
-  color: #eee;
+  color: #52223f;
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 7.5px;
   position: absolute;
   right: 100px;
   top: 55px;
+  b {
+    color: #f28542;
+  }
 `;
 
 const SubText = styled.div`
@@ -128,8 +133,8 @@ const Desc = styled.div`
   margin-top: 950px;
   left: 25px;
 
-  &.fade-in {
-    animation: ${frameInAnimation} 1s forwards;
+  &.frame-in {
+    animation: ${frameInAnimation} 0.8s forwards;
   }
 `;
 
@@ -199,8 +204,32 @@ const Map = styled.img`
 `;
 
 const Intro = () => {
-  const animatedItem: any = useScrollFadeIn("up", 1, 1);
-  const animatedItem2: any = useScrollFadeIn("up", 1, 0.1);
+  const animatedItem: any = useScrollFadeIn("up", 1, 0.1);
+  const [isInViewport, setIsInViewport] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const callback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsInViewport(true);
+        } else {
+          setIsInViewport(false);
+        }
+      });
+    };
+
+    const options = { root: null, rootMargin: "0px", threshold: 0 };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
@@ -213,10 +242,7 @@ const Intro = () => {
             <Line2 />
           </div>
           <div className="box-wrapper-2">
-            <Box src={box} />
-            <Line3 />
-            <Line4 />
-            <Desc {...animatedItem2}>
+            <Desc className={isInViewport ? "frame-in" : ""} ref={ref}>
               코로나 팬데믹 이후, 소비 패턴이 물질적인 제품에서 경험 중심의
               소비로 크게 변화했다. 이러한 변화는 상업 공간 또한 공간의 크기와
               디자인에 영향을 미쳤으며, 무인 서비스 도입과 같은 혁신적인 변화가
@@ -231,9 +257,12 @@ const Intro = () => {
               공간으로 만들어가는 과정을 나타내고 이번 졸업전시를 통해 엔데믹
               시대의 경험과 기억을 함께 나누고자 합니다.
             </Desc>
+            <Box src={box} />
+            <Line3 />
+            <Line4 />
           </div>
           <Text>
-            <Typewriter text="공간에는 힘이 있다" delay={80} />
+            <b>공간</b>에는 <b>힘이</b>있다
           </Text>
           <SubText>空間力 ; 공간력</SubText>
 
