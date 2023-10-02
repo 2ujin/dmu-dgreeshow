@@ -3,11 +3,13 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import poster from "../assets/poster.png";
 import box from "../assets/box.svg";
+import box2 from "../assets/box2.svg";
 import Typewriter from "../components/typingText";
 import { useState, useRef, useEffect } from "react";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const ContentWrapper = styled.div`
-  height: 2000px;
+  height: 2600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +54,6 @@ const Box = styled.img`
   right: 5px;
   width: 1200px;
   z-index: 0;
-  /* margin-top: 110px; */
 `;
 
 const Poster = styled.img`
@@ -132,32 +133,67 @@ const Desc = styled.div`
   }
 `;
 
+const Box2Wrapper = styled.div`
+  position: absolute;
+  top: 1500px;
+  right: 50px;
+  width: 100%;
+  background-color: aqua;
+`;
+
+const Box2 = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+`;
+
+const Opening = styled.div`
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.84px;
+  position: absolute;
+  top: -100px;
+  left: 160px;
+
+  &.fade-in2 {
+    animation: ${frameInAnimation} 1s forwards;
+  }
+`;
+
+const Date = styled.div`
+  color: #fff;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 1.68px;
+  position: absolute;
+  top: -60px;
+  left: 160px;
+  &.fade-in2 {
+    animation: ${frameInAnimation} 1s forwards;
+  }
+`;
+
+const Where = styled.div`
+  color: #fff;
+  font-family: SUIT;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.24px;
+
+  position: absolute;
+  top: 50px;
+  left: 160px;
+  &.fade-in2 {
+    animation: ${frameInAnimation} 1s forwards;
+  }
+`;
+
 const Intro = () => {
-  const [isInViewport, setIsInViewport] = useState(false);
-  const ref = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    if (!ref.current) return;
-
-    const callback = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setIsInViewport(true);
-        } else {
-          setIsInViewport(false);
-        }
-      });
-    };
-
-    const options = { root: null, rootMargin: "0px", threshold: 0 };
-
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(ref.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
+  const animatedItem: any = useScrollFadeIn("up", 1, 1);
+  const animatedItem2: any = useScrollFadeIn("up", 1, 0.1);
 
   return (
     <>
@@ -173,7 +209,7 @@ const Intro = () => {
             <Box src={box} />
             <Line3 />
             <Line4 />
-            <Desc className={isInViewport ? "fade-in" : ""} ref={ref}>
+            <Desc {...animatedItem2}>
               코로나 팬데믹 이후, 소비 패턴이 물질적인 제품에서 경험 중심의
               소비로 크게 변화했다. 이러한 변화는 상업 공간 또한 공간의 크기와
               디자인에 영향을 미쳤으며, 무인 서비스 도입과 같은 혁신적인 변화가
@@ -193,6 +229,17 @@ const Intro = () => {
             <Typewriter text="공간에는 힘이 있다" delay={80} />
           </Text>
           <SubText>空間力 ; 공간력</SubText>
+
+          <Box2Wrapper>
+            <div {...animatedItem}>
+              <Opening>OPENING 2023.10.18</Opening>
+              <Date>2023.10.16-10.22</Date>
+              <Where>
+                동양미래대학교 8-1F <br />| 6DM GALLERY
+              </Where>
+            </div>
+            <Box2 src={box2} />
+          </Box2Wrapper>
         </PostWrapper>
       </ContentWrapper>
 
