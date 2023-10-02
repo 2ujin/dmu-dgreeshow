@@ -22,6 +22,7 @@ const Date = styled.div`
   line-height: normal;
   flex: 1;
   transition: 0.2s all;
+  // test
 `;
 
 const Text = styled.div`
