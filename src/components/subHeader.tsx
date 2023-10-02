@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import logo from "../assets/logo.svg";
 import "../App.css";
 
 const SubHeaderWrapper = styled.div`

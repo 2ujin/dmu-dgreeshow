@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   background-color: #ffffff;
-  padding: 10px;
+  padding: 13px;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,9 +23,14 @@ const _Header = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 450px;
+  padding: 18px;
 `;
 
-const Logo = styled.img``;
+const Logo = styled.img`
+  width: 180px;
+  position: absolute;
+  top: 0;
+`;
 
 const Space = styled.div`
   width: 100px;

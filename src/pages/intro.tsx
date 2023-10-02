@@ -5,8 +5,8 @@ import poster from "../assets/poster.png";
 import box from "../assets/box.svg";
 import box2 from "../assets/box2.svg";
 import Typewriter from "../components/typingText";
-import { useState, useRef, useEffect } from "react";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
+import map from "../assets/map.png";
 
 const ContentWrapper = styled.div`
   height: 2600px;
@@ -191,6 +191,13 @@ const Where = styled.div`
   }
 `;
 
+const Map = styled.img`
+  width: 500px;
+  position: absolute;
+  top: 280px;
+  left: 160px;
+`;
+
 const Intro = () => {
   const animatedItem: any = useScrollFadeIn("up", 1, 1);
   const animatedItem2: any = useScrollFadeIn("up", 1, 0.1);
@@ -238,6 +245,7 @@ const Intro = () => {
                 동양미래대학교 8-1F <br />| 6DM GALLERY
               </Where>
             </div>
+            <Map src={map} />
             <Box2 src={box2} />
           </Box2Wrapper>
         </PostWrapper>
