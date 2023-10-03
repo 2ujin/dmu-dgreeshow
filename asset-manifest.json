@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/yisol-dmu-gx/static/css/main.0b733578.css",
-    "main.js": "/yisol-dmu-gx/static/js/main.c9457b3f.js",
+    "main.js": "/yisol-dmu-gx/static/js/main.4cbe21b0.js",
     "static/js/787.a42ef725.chunk.js": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js",
     "static/media/mintro.gif": "/yisol-dmu-gx/static/media/mintro.8256a1e754c6e61a507e.gif",
     "static/media/poster.png": "/yisol-dmu-gx/static/media/poster.5699ef02442cb931be04.png",
-    "static/media/map.png": "/yisol-dmu-gx/static/media/map.cffe758744a9fdb19f1f.png",
+    "static/media/map.png": "/yisol-dmu-gx/static/media/map.c71ab6284c0a73459a0f.png",
     "static/media/logo.svg": "/yisol-dmu-gx/static/media/logo.d91630824e3a0bb6f7d99de84dcf464c.svg",
     "static/media/mlogo.png": "/yisol-dmu-gx/static/media/mlogo.7d791b9c7505f58b77f7.png",
     "static/media/student_bg.svg": "/yisol-dmu-gx/static/media/student_bg.96bbdb4243251a47c03c86655d748b4d.svg",
@@ -14,15 +14,15 @@
     "static/media/m-box.svg": "/yisol-dmu-gx/static/media/m-box.692a0a95cbd675cbba1a29ad781d126c.svg",
     "static/media/m-box2.svg": "/yisol-dmu-gx/static/media/m-box2.dd4e55457be90f465aa726e48eafdca5.svg",
     "index.html": "/yisol-dmu-gx/index.html",
-    "static/media/box2.svg": "/yisol-dmu-gx/static/media/box2.9737eda925bb7b5ceb14732be2559d91.svg",
     "static/media/i_menu.svg": "/yisol-dmu-gx/static/media/i_menu.b4e798e68f20175fcf4a0cedc31c1969.svg",
+    "static/media/box2.svg": "/yisol-dmu-gx/static/media/box2.ab87d572671451af2ae44bb22f65db0e.svg",
     "static/media/i_close.svg": "/yisol-dmu-gx/static/media/i_close.43694f1d38bec7087eae134901c41a7f.svg",
     "main.0b733578.css.map": "/yisol-dmu-gx/static/css/main.0b733578.css.map",
-    "main.c9457b3f.js.map": "/yisol-dmu-gx/static/js/main.c9457b3f.js.map",
+    "main.4cbe21b0.js.map": "/yisol-dmu-gx/static/js/main.4cbe21b0.js.map",
     "787.a42ef725.chunk.js.map": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b733578.css",
-    "static/js/main.c9457b3f.js"
+    "static/js/main.4cbe21b0.js"
   ]
 }
