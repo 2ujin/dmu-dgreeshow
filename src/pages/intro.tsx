@@ -26,6 +26,12 @@ const Text = styled.div`
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 7.5px;
+  width: 13ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+
   position: absolute;
   right: 100px;
   top: 55px;
