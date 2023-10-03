@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/yisol-dmu-gx/static/css/main.0b733578.css",
-    "main.js": "/yisol-dmu-gx/static/js/main.d0566dc2.js",
+    "main.js": "/yisol-dmu-gx/static/js/main.c9457b3f.js",
     "static/js/787.a42ef725.chunk.js": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js",
+    "static/media/mintro.gif": "/yisol-dmu-gx/static/media/mintro.8256a1e754c6e61a507e.gif",
     "static/media/poster.png": "/yisol-dmu-gx/static/media/poster.5699ef02442cb931be04.png",
     "static/media/map.png": "/yisol-dmu-gx/static/media/map.cffe758744a9fdb19f1f.png",
     "static/media/logo.svg": "/yisol-dmu-gx/static/media/logo.d91630824e3a0bb6f7d99de84dcf464c.svg",
@@ -17,11 +18,11 @@
     "static/media/i_menu.svg": "/yisol-dmu-gx/static/media/i_menu.b4e798e68f20175fcf4a0cedc31c1969.svg",
     "static/media/i_close.svg": "/yisol-dmu-gx/static/media/i_close.43694f1d38bec7087eae134901c41a7f.svg",
     "main.0b733578.css.map": "/yisol-dmu-gx/static/css/main.0b733578.css.map",
-    "main.d0566dc2.js.map": "/yisol-dmu-gx/static/js/main.d0566dc2.js.map",
+    "main.c9457b3f.js.map": "/yisol-dmu-gx/static/js/main.c9457b3f.js.map",
     "787.a42ef725.chunk.js.map": "/yisol-dmu-gx/static/js/787.a42ef725.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b733578.css",
-    "static/js/main.d0566dc2.js"
+    "static/js/main.c9457b3f.js"
   ]
 }
