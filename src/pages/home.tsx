@@ -308,8 +308,12 @@ const Home = () => {
 
             <Box src={mbox} />
             <Box2 src={mbox2} />
-            <SubText>복합공간설계</SubText>
-            <SubText2>가구디자인</SubText2>
+            <SubText onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
+              복합공간설계
+            </SubText>
+            <SubText2 onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
+              가구디자인
+            </SubText2>
           </MenuWrapper>
         )}
       </HomeWrapper>

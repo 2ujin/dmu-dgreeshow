@@ -76,10 +76,22 @@ const SideMenu = (props: { data: any; state: any; closeModal: any }) => {
         <TextWrapper>
           <NavLink to="/profile">profile</NavLink>
         </TextWrapper>
-        <TextWrapper>project</TextWrapper>
-        <TextWrapper>복합공간설계</TextWrapper>
-        <TextShortWrapper>가구디자인</TextShortWrapper>
-        <TextShortWrapper>코디네이션</TextShortWrapper>
+        <TextWrapper onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
+          project
+        </TextWrapper>
+        <TextWrapper onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
+          복합공간설계
+        </TextWrapper>
+        <TextShortWrapper
+          onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
+        >
+          가구디자인
+        </TextShortWrapper>
+        <TextShortWrapper
+          onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
+        >
+          코디네이션
+        </TextShortWrapper>
         <TextShortWrapper>
           <NavLink to="/event">event</NavLink>
         </TextShortWrapper>
