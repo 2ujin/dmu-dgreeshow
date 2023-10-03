@@ -4,6 +4,7 @@ import bg from "../assets/student_bg.svg";
 import logo from "../assets/student_logo.svg";
 import test from "../assets/profile/최이솔.jpg";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -42,6 +43,11 @@ const StudentWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   z-index: 99;
+
+  &.s-mobile {
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 const Student = styled.div`
@@ -57,6 +63,10 @@ const Student = styled.div`
     font-size: 20px;
     font-weight: 400;
   }
+
+  &.s-mobile {
+    margin-left: 10px;
+  }
 `;
 
 const StudentImage = styled.img`
@@ -68,6 +78,10 @@ const StudentImage = styled.img`
 
   ${Student}:hover & {
     transform: scale(1.02);
+    filter: grayscale(0%);
+  }
+
+  &.s-mobile {
     filter: grayscale(0%);
   }
 `;
@@ -199,6 +213,8 @@ const Profile = () => {
     }
   };
 
+  const isMobile = useMediaQuery({ query: "(max-width:768px)" });
+
   return (
     <>
       <Header />
@@ -217,10 +233,11 @@ const Profile = () => {
         </SubMenuWrappeer>
       </TitleWrapper>
       <Wrapper>
-        <StudentWrapper>
+        <StudentWrapper className={isMobile ? "s-mobile" : ""}>
           {studentList.map((name) => (
-            <Student>
+            <Student className={isMobile ? "s-mobile" : ""}>
               <StudentImage
+                  className={isMobile ? "s-mobile" : ""}
                 loading="lazy"
                 src={`${process.env.PUBLIC_URL}/profile/${name}.jpg`}
               />
