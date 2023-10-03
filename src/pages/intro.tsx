@@ -4,11 +4,9 @@ import Header from "../components/header";
 import poster from "../assets/poster.png";
 import box from "../assets/box.svg";
 import box2 from "../assets/box2.svg";
-import Typewriter from "../components/typingText";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
 import map from "../assets/map.png";
 import { useState, useEffect, useRef } from "react";
-import Typist from "react-typist";
 
 const ContentWrapper = styled.div`
   height: 4000px;

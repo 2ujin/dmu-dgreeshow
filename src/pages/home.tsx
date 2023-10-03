@@ -3,6 +3,7 @@ import Header from "../components/header";
 import ReactPlayer from "react-player";
 import Footer from "../components/footer";
 import { useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const HomeWrapper = styled.div`
   height: 100vh;
@@ -20,10 +21,12 @@ const Wrapper = styled.div`
 
 const MenuWrapper = styled.div`
   width: 100%;
-  /* padding: 60px 0px; */
   background: linear-gradient(251deg, #ba6c9e 22.05%, #f7bd96 75.22%);
   margin-top: -1px;
   height: 1000px;
+  &.mobile-wrapper {
+    padding: 20px;
+  }
 `;
 
 const frameInAnimation = keyframes`
@@ -118,6 +121,8 @@ const Home = () => {
     box6_right.style.height = isHoveredRight ? "100%" : "0";
   };
 
+  const isMobile = useMediaQuery({ query: "(max-width:768px)" });
+
   return (
     <>
       <HomeWrapper>
@@ -131,71 +136,77 @@ const Home = () => {
             height="100%"
             loop={true}
             muted
-            className={"video"}
+            className={isMobile ? "mobile-video" : "web"}
           />
         </Wrapper>
 
-        <MenuWrapper>
-          <div className="box-wrapper">
-            <Container className={isInViewport ? "frame-in" : ""} ref={ref}>
-              SPACE <br /> WITHIN <br /> SPACE
-            </Container>
-            <div className="box1">
-              <div className="box1-line-right"></div>
-              <div className="box1-line-bottom"></div>
-            </div>
-            <div className="box-left-wrapper">
-              <div
-                className={`box2 ${isHoveredLeft ? "hovered" : ""}`}
-                onMouseEnter={() => {
-                  setIsHoveredLeft(true);
-                  changeLeftLineStyle();
-                }}
-                onMouseLeave={() => {
-                  setIsHoveredLeft(false);
-                  changeLeftLineStyle();
-                }}
-              >
-                <div className="box2-line-top"></div>
-                <div className="box2-line-right"></div>
-                <div className="box2-line-left"></div>
-                <div className="box2-line-bottom"></div>
-                <div className="box2-title">복합공간설계</div>
+        {!isMobile ? (
+          <MenuWrapper>
+            <div className="box-wrapper">
+              <Container className={isInViewport ? "frame-in" : ""} ref={ref}>
+                SPACE <br /> WITHIN <br /> SPACE
+              </Container>
+              <div className="box1">
+                <div className="box1-line-right"></div>
+                <div className="box1-line-bottom"></div>
               </div>
-              <div className={`box3 ${isHoveredLeft ? "hovered" : ""}`}>
-                <div className="box3-line-top"></div>
-                <div className="box3-line-right"></div>
+              <div className="box-left-wrapper">
+                <div
+                  className={`box2 ${isHoveredLeft ? "hovered" : ""}`}
+                  onMouseEnter={() => {
+                    setIsHoveredLeft(true);
+                    changeLeftLineStyle();
+                  }}
+                  onMouseLeave={() => {
+                    setIsHoveredLeft(false);
+                    changeLeftLineStyle();
+                  }}
+                >
+                  <div className="box2-line-top"></div>
+                  <div className="box2-line-right"></div>
+                  <div className="box2-line-left"></div>
+                  <div className="box2-line-bottom"></div>
+                  <div className="box2-title">복합공간설계</div>
+                </div>
+                <div className={`box3 ${isHoveredLeft ? "hovered" : ""}`}>
+                  <div className="box3-line-top"></div>
+                  <div className="box3-line-right"></div>
+                </div>
+                <div className="box4"></div>
               </div>
-              <div className="box4"></div>
-            </div>
-            <div className="box-right-wrapper">
-              <div className="box5"></div>
-              <div
-                className={`box6 ${isHoveredRight ? "hovered" : ""}`}
-                onMouseEnter={() => {
-                  setIsHoveredRight(true);
-                  changeRightLineStyle(); // 호버 시 스타일 변경 함수 호출
-                }}
-                onMouseLeave={() => {
-                  setIsHoveredRight(false);
-                  changeRightLineStyle(); // 호버 해제 시 스타일 변경 함수 호출
-                }}
-              >
-                <div className="box6-title">가구디자인</div>
-                <div className="box6-line-top"></div>
-                <div className="box6-line-right"></div>
-                <div className="box6-line-left"></div>
-                <div className="box6-line-bottom"></div>
+              <div className="box-right-wrapper">
+                <div className="box5"></div>
+                <div
+                  className={`box6 ${isHoveredRight ? "hovered" : ""}`}
+                  onMouseEnter={() => {
+                    setIsHoveredRight(true);
+                    changeRightLineStyle(); // 호버 시 스타일 변경 함수 호출
+                  }}
+                  onMouseLeave={() => {
+                    setIsHoveredRight(false);
+                    changeRightLineStyle(); // 호버 해제 시 스타일 변경 함수 호출
+                  }}
+                >
+                  <div className="box6-title">가구디자인</div>
+                  <div className="box6-line-top"></div>
+                  <div className="box6-line-right"></div>
+                  <div className="box6-line-left"></div>
+                  <div className="box6-line-bottom"></div>
+                </div>
+                <div className="box7"></div>
+                <div className="box8"></div>
               </div>
-              <div className="box7"></div>
-              <div className="box8"></div>
+              <div className="box9">
+                <div className="box9-line-left"></div>
+                <div className="box9-line-top"></div>
+              </div>
             </div>
-            <div className="box9">
-              <div className="box9-line-left"></div>
-              <div className="box9-line-top"></div>
-            </div>
-          </div>
-        </MenuWrapper>
+          </MenuWrapper>
+        ) : (
+          <MenuWrapper className={isMobile ? "mobile-wrapper" : ""}>
+            앱 테스트
+          </MenuWrapper>
+        )}
       </HomeWrapper>
 
       {/* <Footer /> */}

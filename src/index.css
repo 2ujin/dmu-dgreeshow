@@ -328,3 +328,8 @@ body {
 .typing {
   max-width: 100px;
 }
+
+.mobile-video {
+  margin-top: 40px;
+  width: 100%;
+}
