@@ -344,3 +344,7 @@ body {
     border-color: transparent
   }
 }
+
+.before-open {
+  cursor: pointer;
+}

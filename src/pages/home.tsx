@@ -115,8 +115,45 @@ const Home = () => {
   const animatedItem: any = useScrollFadeIn("up", 1, 0.1);
 
   useEffect(() => {
-    if (!ref.current) return;
+    console.log(`
+    ▒▒▒▒▒▒▒▒▒▒▒▒
+    ▒▒▒▒▓▒▒▓▒▒▒▒
+    ▒▒▒▒▓▒▒▓▒▒▒▒
+    ▒▒▒▒▒▒▒▒▒▒▒▒
+    ▒▓▒▒▒▒▒▒▒▒▓▒
+    ▒▒▓▓▓▓▓▓▓▓▒▒
+    ▒▒▒▒▒▒▒▒▒▒▒▒     웃어라 :)
+    `);
+    console.log(`
+    ╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝╮
+                최이솔 바보 멍충이
+    ╰ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞◟◞ ͜ ◟◞ ╯
+    O °
+    ᕱ ᕱ
+   ( ･ω･)
+   / つΦ . .. . ﹢ ⃰ ଂ ಇ
+    `);
+    console.log("졸전 고생했어");
+    console.log("(곧)졸업도 축하해");
+    console.log("이솔이 앞날 창창");
+    console.log("apnalchangchang :)");
+    console.log("웹 디자인 by 최이솔");
+    console.log("웹 개발 by 2j");
 
+    console.log(`
+     ╱◥████◣
+     │田│▤╠╣▤│
+     ╱◥████◣ ╱◥◣
+     ╱◥◣║ ▤∩▤║║田│║
+     │田│◥███◣╱◥███◣
+     ╱◥◣ ◥███◣ 田 ∩│▤║
+    ╱◥◣│╱◥█◣║∩∩∩║◥███◣
+    ║田 ││田│∩║ 田∩田 ║田∩田 ║
+
+    ~ 동양미래대학교 실내건축디자인과 ~
+    `);
+
+    if (!ref.current) return;
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -205,7 +242,10 @@ const Home = () => {
               </div>
               <div className="box-left-wrapper">
                 <div
-                  className={`box2 ${isHoveredLeft ? "hovered" : ""}`}
+                  onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
+                  className={`box2 before-open ${
+                    isHoveredLeft ? "hovered" : ""
+                  }`}
                   onMouseEnter={() => {
                     setIsHoveredLeft(true);
                     changeLeftLineStyle();
@@ -230,7 +270,10 @@ const Home = () => {
               <div className="box-right-wrapper">
                 <div className="box5"></div>
                 <div
-                  className={`box6 ${isHoveredRight ? "hovered" : ""}`}
+                  onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
+                  className={`box6 before-open ${
+                    isHoveredRight ? "hovered" : ""
+                  }`}
                   onMouseEnter={() => {
                     setIsHoveredRight(true);
                     changeRightLineStyle(); // 호버 시 스타일 변경 함수 호출

@@ -13,13 +13,12 @@ const HeaderWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   background-color: #ffffff;
-  padding: 13px;
+  padding: 33px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-
   &.mobile {
     padding: 20px;
   }
@@ -28,24 +27,25 @@ const HeaderWrapper = styled.div`
 const _Header = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 450px;
+  justify-content: space-between;
+  width: 500px;
   padding: 18px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const Logo = styled.img`
-  width: 180px;
+  width: 170px;
   position: absolute;
   top: 0;
+  left: 10%;
 
   &.mobile-logo {
     width: 100px;
     left: 10px;
   }
-`;
-
-const Space = styled.div`
-  width: 100px;
 `;
 
 const Icon = styled.img`
@@ -108,17 +108,15 @@ const Header = () => {
           >
             PROFILE
           </NavLink>
-          <NavLink
+          <div
+            onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className={({ isActive }) =>
-              isActive ? "link-active" : "header-text"
-            }
-            to="/project"
+            className="header-text before-open"
           >
             PROJECT
             {isDropdownVisible && <SubHeader />}
-          </NavLink>
+          </div>
           <NavLink
             className={({ isActive }) =>
               isActive ? "link-active" : "header-text"
@@ -134,7 +132,6 @@ const Header = () => {
           <SideMenu data="" state={modalState} closeModal={closeModal} />
         </>
       )}
-      <Space>ㅤ</Space>
     </HeaderWrapper>
   );
 };
