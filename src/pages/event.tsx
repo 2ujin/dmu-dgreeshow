@@ -24,6 +24,10 @@ const TextItem = styled.div`
     align-items: flex-start;
     width: 100%;
     flex-direction: column;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
   }
 `;
 const Date = styled.div`
@@ -52,7 +56,7 @@ const Text = styled.div`
 
   &.w-mobile {
     margin-left: 0px;
-    font-size: 33px;
+    font-size: 28px;
   }
 `;
 
@@ -66,7 +70,7 @@ const Hr = styled.div`
   &.w-mobile {
     width: 100%;
     margin-top: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 `;
 
