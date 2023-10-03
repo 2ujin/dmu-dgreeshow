@@ -153,7 +153,7 @@ const Box2Wrapper = styled.div`
 const Box2 = styled.img`
   position: absolute;
   top: 0;
-  right: 0;
+  right: 20px;
 `;
 
 const Opening = styled.div`
@@ -205,6 +205,7 @@ const Map = styled.img`
   position: absolute;
   top: 280px;
   left: 160px;
+  z-index: 9;
 `;
 
 const Intro = () => {

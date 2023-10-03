@@ -110,6 +110,7 @@ const SubText2 = styled.div`
 
 const Mintro = styled.img`
   width: 100%;
+  margin-top: 50px;
 `;
 
 const Home = () => {
