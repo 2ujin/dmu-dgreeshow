@@ -187,7 +187,7 @@ const Home = () => {
             height="100%"
             loop={true}
             muted
-            className={isMobile ? "mobile-video" : "web"}
+            className={isMobile ? "mobile-video" : ""}
           />
         </Wrapper>
 
