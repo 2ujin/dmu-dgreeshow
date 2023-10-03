@@ -86,6 +86,7 @@ const MenuItem = styled.div`
   font-style: normal;
   font-weight: 400;
   color: #949494;
+  cursor: pointer;
 
   &.active {
     color: #f28542;
@@ -105,7 +106,7 @@ const Profile = () => {
     "김경호",
     "김규진",
     "김다은",
-    "김다은_19",
+    "김다은19",
     "김도영",
     "김민",
     "김민영",
@@ -116,7 +117,7 @@ const Profile = () => {
     "김소망",
     "김소영",
     "김수연",
-    "김수연_20",
+    "김수연20",
     "김시영",
     "김시온",
     "김시후",
@@ -127,6 +128,7 @@ const Profile = () => {
     "김은호",
     "김혜원",
     "김희원",
+    "나예림",
   ];
   const listB = [
     "류정원",
@@ -209,7 +211,7 @@ const Profile = () => {
               className={subActive === item ? "active" : ""}
               onClick={() => clickSubMenu(item)}
             >
-              <a>{item}</a>
+              {item}
             </MenuItem>
           ))}
         </SubMenuWrappeer>
@@ -222,7 +224,7 @@ const Profile = () => {
                 loading="lazy"
                 src={`${process.env.PUBLIC_URL}/profile/${name}.jpg`}
               />
-              <span>{name}</span>
+              <span>{name.replace(/[0-9 ]/gim, "")}</span>
             </Student>
           ))}
         </StudentWrapper>

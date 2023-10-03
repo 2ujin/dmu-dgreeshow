@@ -73,7 +73,9 @@ const SideMenu = (props: { data: any; state: any; closeModal: any }) => {
         <TextWrapper>
           <NavLink to="/intro">intro</NavLink>
         </TextWrapper>
-        <TextWrapper>profile</TextWrapper>
+        <TextWrapper>
+          <NavLink to="/profile">profile</NavLink>
+        </TextWrapper>
         <TextWrapper>project</TextWrapper>
         <TextWrapper>복합공간설계</TextWrapper>
         <TextShortWrapper>가구디자인</TextShortWrapper>
