@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import mbox from "../assets/m-box.svg";
 import mbox2 from "../assets/m-box2.svg";
+import mintro from "../assets/mintro.gif";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const HomeWrapper = styled.div`
@@ -105,6 +106,10 @@ const SubText2 = styled.div`
   color: #fff;
   font-size: 18px;
   font-weight: 700;
+`;
+
+const Mintro = styled.img`
+  width: 100%;
 `;
 
 const Home = () => {
@@ -216,18 +221,20 @@ const Home = () => {
         <Header />
 
         <Wrapper>
-          <ReactPlayer
-            playsInline
-            playing
-            url={`${process.env.PUBLIC_URL}/video/${
-              isMobile ? "mintro" : "intro"
-            }.mp4`}
-            width="100%"
-            height="100%"
-            loop={true}
-            muted
-            className={isMobile ? "mobile-video" : ""}
-          />
+          {!isMobile ? (
+            <ReactPlayer
+              playsInline
+              playing
+              url={`${process.env.PUBLIC_URL}/video/intro.mp4`}
+              width="100%"
+              height="100%"
+              loop={true}
+              muted
+              className={isMobile ? "mobile-video" : ""}
+            />
+          ) : (
+            <Mintro src={mintro} />
+          )}
         </Wrapper>
 
         {!isMobile ? (
