@@ -73,7 +73,7 @@ const Mtext = styled.div`
   line-height: 131.467%;
   position: absolute;
   left: 20px;
-  top: 40px;
+  top: 35px;
 `;
 
 const Box = styled.img`

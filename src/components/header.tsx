@@ -5,6 +5,8 @@ import logo from "../assets/logo.svg";
 import SubHeader from "./subHeader";
 import { NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import i_menu from "../assets/icons/i_menu.svg";
+import SideMenu from "./sideMenu";
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -46,6 +48,12 @@ const Space = styled.div`
   width: 100px;
 `;
 
+const Icon = styled.img`
+  width: 25px;
+  position: absolute;
+  right: 10px;
+`;
+
 const Header = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -58,6 +66,15 @@ const Header = () => {
   };
 
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
+  const [modalState, setModalState] = useState(false);
+  const openModal = () => {
+    setModalState(true);
+  };
+
+  const closeModal = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    setModalState(false);
+  };
 
   return (
     <HeaderWrapper className={isMobile ? "mobile" : "web"}>
@@ -112,7 +129,10 @@ const Header = () => {
           </NavLink>
         </_Header>
       ) : (
-        ""
+        <>
+          <Icon src={i_menu} onClick={openModal} />
+          <SideMenu data="" state={modalState} closeModal={closeModal} />
+        </>
       )}
       <Space>ㅤ</Space>
     </HeaderWrapper>
