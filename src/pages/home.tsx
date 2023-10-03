@@ -4,6 +4,9 @@ import ReactPlayer from "react-player";
 import Footer from "../components/footer";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import mbox from "../assets/m-box.svg";
+import mbox2 from "../assets/m-box2.svg";
+import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const HomeWrapper = styled.div`
   height: 100vh;
@@ -23,16 +26,19 @@ const MenuWrapper = styled.div`
   width: 100%;
   background: linear-gradient(251deg, #ba6c9e 22.05%, #f7bd96 75.22%);
   margin-top: -1px;
-  height: 1000px;
+  height: 100vh;
+  position: relative;
   &.mobile-wrapper {
     padding: 20px;
+    overflow-x: hidden;
+    margin-bottom: -127px;
   }
 `;
 
 const frameInAnimation = keyframes`
   0% {
     font-size: 50px;
-  line-height: 125%;
+    line-height: 125%;
   }
 
   100%{
@@ -58,11 +64,53 @@ const Container = styled.div`
   }
 `;
 
+const Mtext = styled.div`
+  color: #fff;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 100;
+  line-height: 131.467%;
+  position: absolute;
+  left: 20px;
+`;
+
+const Box = styled.img`
+  position: absolute;
+  right: 10px;
+  width: 350px;
+`;
+
+const Box2 = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  width: 350px;
+`;
+
+const SubText = styled.div`
+  position: absolute;
+  right: 35px;
+  top: 160px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+`;
+
+const SubText2 = styled.div`
+  position: absolute;
+  bottom: 255px;
+  left: 75px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+`;
+
 const Home = () => {
   const [isHoveredLeft, setIsHoveredLeft] = useState(false);
   const [isHoveredRight, setIsHoveredRight] = useState(false);
   const [isInViewport, setIsInViewport] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const animatedItem: any = useScrollFadeIn("up", 1, 0.1);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -130,6 +178,7 @@ const Home = () => {
 
         <Wrapper>
           <ReactPlayer
+            playsInline
             playing
             url={`${process.env.PUBLIC_URL}/video/intro.mp4`}
             width="100%"
@@ -204,7 +253,16 @@ const Home = () => {
           </MenuWrapper>
         ) : (
           <MenuWrapper className={isMobile ? "mobile-wrapper" : ""}>
-            앱 테스트
+            <Mtext {...animatedItem}>
+              SPACE <br />
+              WITHIN <br />
+              SPACE
+            </Mtext>
+
+            <Box src={mbox} />
+            <Box2 src={mbox2} />
+            <SubText>복합공간설계</SubText>
+            <SubText2>가구디자인</SubText2>
           </MenuWrapper>
         )}
       </HomeWrapper>
