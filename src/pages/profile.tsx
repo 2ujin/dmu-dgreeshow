@@ -209,7 +209,7 @@ const Profile = () => {
               className={subActive === item ? "active" : ""}
               onClick={() => clickSubMenu(item)}
             >
-              {item}
+              <a>{item}</a>
             </MenuItem>
           ))}
         </SubMenuWrappeer>

@@ -182,7 +182,9 @@ const Home = () => {
           <ReactPlayer
             playsInline
             playing
-            url={`${process.env.PUBLIC_URL}/video/intro.mp4`}
+            url={`${process.env.PUBLIC_URL}/video/${
+              isMobile ? "mintro" : "intro"
+            }.mp4`}
             width="100%"
             height="100%"
             loop={true}
