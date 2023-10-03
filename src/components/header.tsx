@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
+import mlogo from "../assets/mlogo.png";
 import SubHeader from "./subHeader";
 import { NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
@@ -20,7 +21,7 @@ const HeaderWrapper = styled.div`
   right: 0;
   z-index: 999;
   &.mobile {
-    padding: 20px;
+    padding: 30px;
   }
 `;
 
@@ -43,8 +44,9 @@ const Logo = styled.img`
   left: 10%;
 
   &.mobile-logo {
-    width: 100px;
-    left: 10px;
+    width: 40px;
+    left: 15px;
+    top: 8px;
   }
 `;
 
@@ -79,7 +81,10 @@ const Header = () => {
   return (
     <HeaderWrapper className={isMobile ? "mobile" : "web"}>
       <Link to="/">
-        <Logo className={isMobile ? "mobile-logo" : "web"} src={logo} />
+        <Logo
+          className={isMobile ? "mobile-logo" : "web"}
+          src={isMobile ? mlogo : logo}
+        />
       </Link>
 
       {!isMobile ? (

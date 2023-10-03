@@ -21,11 +21,15 @@ const TitleWrapper = styled.div`
   justify-content: center;
   position: absolute;
   top: 160px;
+
+  &.s-mobile {
+    top: 140px;
+  }
 `;
 
 const Title = styled.img`
   width: 250px;
-  z-index: 999;
+  z-index: 998;
 `;
 
 const Bg = styled.div`
@@ -82,6 +86,7 @@ const StudentImage = styled.img`
   }
 
   &.s-mobile {
+    width: 160px;
     filter: grayscale(0%);
   }
 `;
@@ -219,7 +224,7 @@ const Profile = () => {
     <>
       <Header />
       <Bg />
-      <TitleWrapper>
+      <TitleWrapper className={isMobile ? "s-mobile" : ""}>
         <Title src={logo} />
         <SubMenuWrappeer>
           {subList.map((item) => (
@@ -237,7 +242,7 @@ const Profile = () => {
           {studentList.map((name) => (
             <Student className={isMobile ? "s-mobile" : ""}>
               <StudentImage
-                  className={isMobile ? "s-mobile" : ""}
+                className={isMobile ? "s-mobile" : ""}
                 loading="lazy"
                 src={`${process.env.PUBLIC_URL}/profile/${name}.jpg`}
               />
