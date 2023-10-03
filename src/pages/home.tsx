@@ -9,7 +9,7 @@ import mbox2 from "../assets/m-box2.svg";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
 
 const HomeWrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,12 +26,13 @@ const MenuWrapper = styled.div`
   width: 100%;
   background: linear-gradient(251deg, #ba6c9e 22.05%, #f7bd96 75.22%);
   margin-top: -1px;
-  height: 100vh;
+  /* height: 100vh; */
   position: relative;
   &.mobile-wrapper {
     padding: 20px;
     overflow-x: hidden;
     margin-bottom: -127px;
+    height: 720px;
   }
 `;
 
@@ -72,6 +73,7 @@ const Mtext = styled.div`
   line-height: 131.467%;
   position: absolute;
   left: 20px;
+  top: 40px;
 `;
 
 const Box = styled.img`
@@ -98,8 +100,8 @@ const SubText = styled.div`
 
 const SubText2 = styled.div`
   position: absolute;
-  bottom: 255px;
-  left: 75px;
+  bottom: 270px;
+  left: 60px;
   color: #fff;
   font-size: 18px;
   font-weight: 700;
