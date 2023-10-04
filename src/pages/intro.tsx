@@ -279,7 +279,9 @@ const Intro = () => {
                 동양미래대학교 8-1F <br />| 6DM GALLERY
               </Where>
             </div>
-            <Map src={map} />
+            <a href="https://naver.me/GkKrYVUz" target="_blank">
+              <Map src={map} />
+            </a>
             <Box2 src={box2} />
           </Box2Wrapper>
         </PostWrapper>
