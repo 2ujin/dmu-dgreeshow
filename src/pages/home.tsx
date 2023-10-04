@@ -326,7 +326,7 @@ const Home = () => {
         )}
       </HomeWrapper>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

@@ -5,6 +5,7 @@ import logo from "../assets/student_logo.svg";
 import test from "../assets/profile/최이솔.jpg";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import Footer from "../components/footer";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -251,6 +252,8 @@ const Profile = () => {
           ))}
         </StudentWrapper>
       </Wrapper>
+
+      <Footer />
     </>
   );
 };

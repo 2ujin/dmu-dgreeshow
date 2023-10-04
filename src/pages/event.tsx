@@ -1,5 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
+import Footer from "../components/footer";
 import Header from "../components/header";
 
 const Wrapper = styled.div`
@@ -8,6 +9,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 150px;
+  margin-bottom: 50px;
 
   &.w-mobile {
     margin-top: 100px;
@@ -109,6 +111,8 @@ const Event = () => {
           </>
         ))}
       </Wrapper>
+
+      <Footer isLine={true} />
     </>
   );
 };

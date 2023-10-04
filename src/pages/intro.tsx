@@ -285,7 +285,7 @@ const Intro = () => {
         </PostWrapper>
       </ContentWrapper>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
