@@ -60,3 +60,9 @@ li:hover {
   line-height: 30px;
   margin-bottom: 30px;
 }
+
+.mintroo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

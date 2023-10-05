@@ -278,8 +278,14 @@ const MPoster = styled.img`
 `;
 
 const Intro = () => {
-  const animatedItem: any = useScrollFadeIn("up", 1, 0.1);
-  const animatedItem2: any = useScrollFadeIn("right", 1, 0.1);
+  // const animatedItem: any = useScrollFadeIn("up", 1, 0);
+  // const animatedItem2: any = useScrollFadeIn("right", 1, 0);
+
+  const animatedItem33: any = {
+    0: useScrollFadeIn("up", 1, 0),
+    1: useScrollFadeIn("left", 1, 0.6),
+    2: useScrollFadeIn("up", 1, 0),
+  };
 
   const [isInViewport, setIsInViewport] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -348,13 +354,13 @@ const Intro = () => {
               <SubText>空間力 ; 공간력</SubText>
 
               <Box2Wrapper>
-                <div {...animatedItem}>
-                  <Opening>OPENING 2023.10.18</Opening>
-                  <Date>2023.10.16-10.22</Date>
-                  <Where>
-                    동양미래대학교 8-1F <br />| 6DM GALLERY
-                  </Where>
-                </div>
+                {/* <div {...animatedItem}> */}
+                <Opening>OPENING 2023.10.18</Opening>
+                <Date>2023.10.16-10.22</Date>
+                <Where>
+                  동양미래대학교 8-1F <br />| 6DM GALLERY
+                </Where>
+                {/* </div> */}
                 <a href="https://naver.me/GkKrYVUz" target="_blank">
                   <Map src={map} />
                 </a>
@@ -369,7 +375,10 @@ const Intro = () => {
         <>
           <Header />
           <ContentWrapper className="m-height">
-            <MIntro {...animatedItem2} src={mintro}></MIntro>
+            <div className="mintroo" {...animatedItem33[0]}>
+              <MIntro src={mintro}></MIntro>
+            </div>
+
             <MDesc>
               코로나 팬데믹 이후, 소비 패턴이 물질적인 제품에서 경험 중심의
               소비로 크게 변화했다. 이러한 변화는 상업 공간 또한 공간의 크기와
@@ -379,7 +388,7 @@ const Intro = () => {
               이러한 힘과 현상을 "공간력"이라 정의한다.
             </MDesc>
             <MPosterWrapper>
-              <MPoster src={poster} />
+              <MPoster {...animatedItem33[1]} src={poster} />
             </MPosterWrapper>
             <MDesc className={isInViewport ? "frame-in" : ""} ref={ref}>
               동양미래대학교 실내건축디자인학과 제22회 졸업전시는 '공간력'을
@@ -387,7 +396,7 @@ const Intro = () => {
               용어는 빈 공간이 아닌 학생들의 창의력과 관람객의 기억으로 가득한
               공간으로 만들어가는 과정을 나타내고 이번 졸업전시를 통해 엔데믹
               시대의 경험과 기억을 함께 나누고자 합니다.
-              <div className="m-text-wrapper">
+              <div className="m-text-wrapper" {...animatedItem33[2]}>
                 <Opening className={isMobile ? "m-intro" : ""}>
                   OPENING 2023.10.18
                 </Opening>
