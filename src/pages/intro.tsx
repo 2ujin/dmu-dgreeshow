@@ -280,8 +280,8 @@ const MPoster = styled.img`
 `;
 
 const Intro = () => {
-  const animatedItem: any = useScrollFadeIn("up", 0.5, 0.5);
-  const animatedItem2: any = useScrollFadeIn("right", 1, 0);
+  const animatedItem: any = useScrollFadeIn("up", 1, 0.1);
+  const animatedItem2: any = useScrollFadeIn("right", 1, 0.1);
 
   const [isInViewport, setIsInViewport] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
