@@ -50,3 +50,13 @@ li:hover {
   font-size: 12px;
   color: #984678;
 }
+
+.m-height {
+  height: 2000px !important;
+}
+
+.m-text-wrapper {
+  width: 100%;
+  padding: 50px 14px;
+  line-height: 30px;
+}
