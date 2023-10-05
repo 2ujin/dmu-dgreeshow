@@ -388,7 +388,7 @@ const Intro = () => {
               이러한 힘과 현상을 "공간력"이라 정의한다.
             </MDesc>
             <MPosterWrapper>
-              <MPoster {...animatedItem33[1]} src={poster} />
+              <MPoster src={poster} />
             </MPosterWrapper>
             <MDesc className={isInViewport ? "frame-in" : ""} ref={ref}>
               동양미래대학교 실내건축디자인학과 제22회 졸업전시는 '공간력'을
