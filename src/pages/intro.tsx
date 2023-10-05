@@ -21,6 +21,8 @@ const ContentWrapper = styled.div`
     rgba(242, 133, 66, 0.9) 15.61%,
     #984678 87.81%
   );
+  width: 100%;
+  overflow-x: hidden;
   height: 4000px;
 `;
 
@@ -278,9 +280,8 @@ const MPoster = styled.img`
 `;
 
 const Intro = () => {
-  const animatedItem: any = useScrollFadeIn("up", 1, 0.1);
-  const animatedItem1: any = useScrollFadeIn("down", 1, 0.1);
-  const animatedItem2: any = useScrollFadeIn("right", 1, 0.5);
+  const animatedItem: any = useScrollFadeIn("up", 0.5, 0.5);
+  const animatedItem2: any = useScrollFadeIn("right", 1, 0);
 
   const [isInViewport, setIsInViewport] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
@@ -371,7 +372,7 @@ const Intro = () => {
           <Header />
           <ContentWrapper className="m-height">
             <MIntro {...animatedItem2} src={mintro}></MIntro>
-            <MDesc ref={ref}>
+            <MDesc>
               코로나 팬데믹 이후, 소비 패턴이 물질적인 제품에서 경험 중심의
               소비로 크게 변화했다. 이러한 변화는 상업 공간 또한 공간의 크기와
               디자인에 영향을 미쳤으며, 무인 서비스 도입과 같은 혁신적인 변화가
