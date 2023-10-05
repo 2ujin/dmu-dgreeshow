@@ -56,6 +56,18 @@ const Icon = styled.img`
   right: 10px;
 `;
 
+const MText = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  text-align: center;
+  color: #984678;
+  font-weight: 600;
+  line-height: 13px;
+`;
+
 const Header = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -134,6 +146,10 @@ const Header = () => {
       ) : (
         <>
           <Icon src={i_menu} onClick={openModal} />
+          <MText>
+            2023 INTERIOR ARCHITECTURE <br />
+            DESIGN DEGREE SHOW
+          </MText>
           <SideMenu data="" state={modalState} closeModal={closeModal} />
         </>
       )}
