@@ -189,7 +189,7 @@ const Opening = styled.div`
     position: relative;
     top: 0;
     left: 0;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 20px;
     margin-bottom: 14px;
   }
@@ -210,7 +210,7 @@ const Date = styled.div`
     position: relative;
     top: 0;
     left: 0;
-    font-size: 36px;
+    font-size: 30px;
     margin-bottom: 14px;
   }
 `;
@@ -234,7 +234,7 @@ const Where = styled.div`
     position: relative;
     top: 0;
     left: 0;
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 10px;
   }
 `;
@@ -387,19 +387,18 @@ const Intro = () => {
               용어는 빈 공간이 아닌 학생들의 창의력과 관람객의 기억으로 가득한
               공간으로 만들어가는 과정을 나타내고 이번 졸업전시를 통해 엔데믹
               시대의 경험과 기억을 함께 나누고자 합니다.
+              <div className="m-text-wrapper">
+                <Opening className={isMobile ? "m-intro" : ""}>
+                  OPENING 2023.10.18
+                </Opening>
+                <Date className={isMobile ? "m-intro" : ""}>
+                  2023.10.16-10.22
+                </Date>
+                <Where className={isMobile ? "m-intro" : ""}>
+                  동양미래대학교 8-1F <br />| 6DM GALLERY
+                </Where>
+              </div>
             </MDesc>
-
-            <div className="m-text-wrapper">
-              <Opening className={isMobile ? "m-intro" : ""}>
-                OPENING 2023.10.18
-              </Opening>
-              <Date className={isMobile ? "m-intro" : ""}>
-                2023.10.16-10.22
-              </Date>
-              <Where className={isMobile ? "m-intro" : ""}>
-                동양미래대학교 8-1F <br />| 6DM GALLERY
-              </Where>
-            </div>
 
             <a href="https://naver.me/GkKrYVUz" target="_blank">
               <Map src={map} className={isMobile ? "m-intro" : ""} />

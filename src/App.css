@@ -57,6 +57,6 @@ li:hover {
 
 .m-text-wrapper {
   width: 100%;
-  padding: 50px 14px;
   line-height: 30px;
+  margin-bottom: 30px;
 }
