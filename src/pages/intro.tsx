@@ -185,15 +185,12 @@ const Opening = styled.div`
   top: -100px;
   left: 160px;
 
-  &.fade-in2 {
-    animation: ${frameInAnimation} 1s forwards;
-  }
-
   &.m-intro {
     position: relative;
     top: 0;
     left: 0;
     font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 14px;
   }
 `;
@@ -238,6 +235,7 @@ const Where = styled.div`
     top: 0;
     left: 0;
     font-size: 40px;
+    margin-bottom: 10px;
   }
 `;
 
