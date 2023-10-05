@@ -391,7 +391,7 @@ const Intro = () => {
               시대의 경험과 기억을 함께 나누고자 합니다.
             </MDesc>
 
-            <div className="m-text-wrapper" {...animatedItem}>
+            <div className="m-text-wrapper">
               <Opening className={isMobile ? "m-intro" : ""}>
                 OPENING 2023.10.18
               </Opening>
