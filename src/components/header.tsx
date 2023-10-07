@@ -32,9 +32,9 @@ const _Header = styled.div`
   width: 500px;
   padding: 18px;
   position: absolute;
-  left: 50%;
+  left: 49%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-44%, -50%);
 `;
 
 const Logo = styled.img`
