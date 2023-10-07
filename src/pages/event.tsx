@@ -2,6 +2,7 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import test from "../assets/test.png";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -76,6 +77,14 @@ const Hr = styled.div`
   }
 `;
 
+const Test = styled.img`
+  width: 100%;
+`;
+
+const Test2 = styled.img`
+  width: 80%;
+`;
+
 const Event = () => {
   const list = [
     { date: "10.16 - 10.24", text: "졸업작품 전시회 기간" },
@@ -89,6 +98,8 @@ const Event = () => {
     <>
       <Header />
       <Wrapper className={isMobile ? "w-mobile" : ""}>
+        <Test src={test} />
+        <Test2 src={test} />
         {list.map((item, index) => (
           <>
             <TextItem
