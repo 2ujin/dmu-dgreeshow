@@ -53,7 +53,7 @@ const Container = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-44%, -50%);
   color: #fff;
   text-align: center;
   font-style: normal;

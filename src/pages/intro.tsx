@@ -32,13 +32,13 @@ const Text = styled.div`
   font-weight: 700;
   letter-spacing: 7.5px;
   width: 13ch;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  animation: typing 1s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
 
   position: absolute;
-  right: 100px;
+  right: 90px;
   top: 55px;
   b {
     color: #f28542;
