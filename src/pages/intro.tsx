@@ -38,8 +38,8 @@ const Text = styled.div`
   border-right: 3px solid;
 
   position: absolute;
-  right: 90px;
-  top: 55px;
+  right: 73px;
+  top: 58px;
   b {
     color: #f28542;
   }
@@ -164,26 +164,31 @@ const MDesc = styled.div`
 
 const Box2Wrapper = styled.div`
   position: absolute;
-  top: 1500px;
-  right: 50px;
+  top: 1400px;
+  right: 0;
   width: 100%;
-  background-color: aqua;
 `;
 
-const Box2 = styled.img`
+const Location = styled.div`
+  color: #fff;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.9px;
   position: absolute;
-  top: 0;
-  right: 20px;
+  top: 180px;
+  left: 80px;
 `;
 
 const Opening = styled.div`
   color: #fff;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0.84px;
   position: absolute;
-  top: -100px;
-  left: 160px;
+  top: 520px;
+  left: 58%;
 
   &.m-intro {
     position: relative;
@@ -198,11 +203,11 @@ const Opening = styled.div`
 const Date = styled.div`
   color: #fff;
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1.68px;
   position: absolute;
-  top: -60px;
-  left: 160px;
+  top: 550px;
+  left: 58%;
   &.fade-in2 {
     animation: ${frameInAnimation} 1s forwards;
   }
@@ -216,17 +221,16 @@ const Date = styled.div`
 `;
 
 const Where = styled.div`
-  color: #fff;
-  font-family: SUIT;
+  color: #984678;
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 2.24px;
+  letter-spacing: 3.36px;
 
   position: absolute;
-  top: 50px;
-  left: 160px;
+  top: 650px;
+  left: 58%;
   &.fade-in2 {
     animation: ${frameInAnimation} 1s forwards;
   }
@@ -240,11 +244,10 @@ const Where = styled.div`
 `;
 
 const Map = styled.img`
-  width: 500px;
+  width: 800px;
   position: absolute;
   top: 280px;
-  left: 160px;
-  z-index: 9;
+  left: 5%;
 
   &.m-intro {
     position: relative;
@@ -283,7 +286,7 @@ const Intro = () => {
 
   const animatedItem33: any = {
     0: useScrollFadeIn("up", 1, 0),
-    1: useScrollFadeIn("left", 1, 0.6),
+    1: useScrollFadeIn("left", 1, 0.8),
     2: useScrollFadeIn("up", 1, 0),
   };
 
@@ -349,22 +352,24 @@ const Intro = () => {
                 <Line4 />
               </div>
               <Text>
-                <b>공간</b>에는 <b>힘이</b>있다
+                <b>공간</b>에는 <b>힘이</b> 있다
               </Text>
               <SubText>空間力 ; 공간력</SubText>
 
               <Box2Wrapper>
-                {/* <div {...animatedItem}> */}
-                <Opening>OPENING 2023.10.18</Opening>
-                <Date>2023.10.16-10.22</Date>
-                <Where>
-                  동양미래대학교 8-1F <br />| 6DM GALLERY
-                </Where>
-                {/* </div> */}
+                <Location>LOCATION</Location>
+
+                <div {...animatedItem33[1]}>
+                  <Opening>OPENING 2023.10.18</Opening>
+                  <Date>2023.10.16-10.22</Date>
+                  <Where>
+                    동양미래대학교 8-1F <br />| 6DM GALLERY
+                  </Where>
+                </div>
                 <a href="https://naver.me/GkKrYVUz" target="_blank">
                   <Map src={map} />
                 </a>
-                <Box2 src={box2} />
+                {/* <Box2 src={box2} /> */}
               </Box2Wrapper>
             </PostWrapper>
           </ContentWrapper>

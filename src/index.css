@@ -313,7 +313,6 @@ body {
 
 .events:hover .event-date{
   color: #F28542;
-  /* margin-bottom: 10px; */
   transition: all 0.2s ease-in-out 0s, visibility 0s;
 
 }

@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 
 const Wrapper = styled.div`
   width: 100%;
+  min-height: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +22,7 @@ const TitleWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 160px;
+  top: 150px;
 
   &.s-mobile {
     top: 140px;
@@ -29,23 +30,31 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.img`
-  width: 250px;
+  width: 290px;
   z-index: 998;
 `;
 
 const Bg = styled.div`
   width: 100%;
-  height: 2000px;
-  max-height: 2700px;
+  height: 2600px;
   background-image: url(${bg});
   background-repeat: repeat-y;
   position: absolute;
+
+  &.height {
+    height: 1600px;
+  }
+
+  &.height2 {
+    height: 2200px;
+  }
 `;
 
 const StudentWrapper = styled.div`
   width: 70%;
   margin-top: 300px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   z-index: 99;
 
@@ -93,7 +102,7 @@ const StudentImage = styled.img`
 `;
 
 const SubMenuWrappeer = styled.div`
-  margin-top: 25px;
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   width: 270px;
@@ -114,8 +123,8 @@ const MenuItem = styled.div`
 `;
 
 const Profile = () => {
-  const subList = ["ㄱ - ㄴ", "ㄹ - ㅇ", "ㅇ - ㅎ"];
-  const [subActive, setsubActive] = useState("ㄱ - ㄴ");
+  const subList = ["ㄱ - ㄹ", "ㅁ - ㅇ", "ㅇ - ㅎ"];
+  const [subActive, setsubActive] = useState("ㄱ - ㄹ");
 
   const listA = [
     "곽민지",
@@ -149,10 +158,10 @@ const Profile = () => {
     "김혜원",
     "김희원",
     "나예림",
-  ];
-  const listB = [
     "류정원",
     "류제영",
+  ];
+  const listB = [
     "문정민",
     "박다운",
     "박미정",
@@ -205,7 +214,6 @@ const Profile = () => {
     "한수연",
     "황서연",
   ];
-
   const [studentList, setstudentList] = useState(listA);
 
   const clickSubMenu = (item: string) => {
@@ -224,7 +232,15 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <Bg />
+      <Bg
+        className={
+          subActive === "ㅁ - ㅇ"
+            ? "height"
+            : subActive === "ㅇ - ㅎ"
+            ? "height2"
+            : ""
+        }
+      />
       <TitleWrapper className={isMobile ? "s-mobile" : ""}>
         <Title src={logo} />
         <SubMenuWrappeer>

@@ -21,6 +21,7 @@ const TextItem = styled.div`
   display: flex;
   width: 75%;
   justify-content: space-between;
+  cursor: pointer;
 
   &.w-mobile {
     padding: 16px;
@@ -34,11 +35,12 @@ const TextItem = styled.div`
   }
 `;
 const Date = styled.div`
+  cursor: pointer;
   color: #000;
   font-size: 86px;
   font-weight: 900;
   line-height: normal;
-  flex: 1;
+  flex: 1.5;
   transition: 0.2s all;
 
   &.w-mobile {
@@ -47,14 +49,15 @@ const Date = styled.div`
 `;
 
 const Text = styled.div`
+  flex: 1;
   display: flex;
   align-items: center;
+  width: 100%;
   color: #000;
   font-size: 38px;
   font-weight: 800;
-  flex: 1;
   text-align: left;
-  margin-left: 30px;
+  margin-left: 10px;
   transition: 0.2s all;
 
   &.w-mobile {
@@ -67,22 +70,14 @@ const Hr = styled.div`
   width: 75%;
   height: 3px;
   background-color: #984678;
-  margin-top: 30px;
-  margin-bottom: 55px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
   &.w-mobile {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-`;
-
-const Test = styled.img`
-  width: 100%;
-`;
-
-const Test2 = styled.img`
-  width: 80%;
 `;
 
 const Event = () => {
@@ -98,8 +93,6 @@ const Event = () => {
     <>
       <Header />
       <Wrapper className={isMobile ? "w-mobile" : ""}>
-        <Test src={test} />
-        <Test2 src={test} />
         {list.map((item, index) => (
           <>
             <TextItem
