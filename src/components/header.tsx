@@ -41,7 +41,7 @@ const Logo = styled.img`
   width: 170px;
   position: absolute;
   top: 0;
-  left: 10%;
+  left: 2%;
 
   &.mobile-logo {
     width: 40px;

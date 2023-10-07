@@ -32,7 +32,7 @@ const SubHeader = () => {
       <ul>
         <li>복합공간설계</li>
         <li>가구디자인</li>
-        <li>코디네이션</li>
+        {/* <li>코디네이션</li> */}
       </ul>
     </div>
   );

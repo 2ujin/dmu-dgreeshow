@@ -87,11 +87,11 @@ const SideMenu = (props: { data: any; state: any; closeModal: any }) => {
         >
           가구디자인
         </TextShortWrapper>
-        <TextShortWrapper
+        {/* <TextShortWrapper
           onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
         >
           코디네이션
-        </TextShortWrapper>
+        </TextShortWrapper> */}
         <TextShortWrapper>
           <NavLink to="/event">event</NavLink>
         </TextShortWrapper>

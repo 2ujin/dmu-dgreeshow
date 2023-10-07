@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 const MenuWrapper = styled.div`
   width: 100%;
   background: linear-gradient(251deg, #ba6c9e 22.05%, #f7bd96 75.22%);
-  margin-top: -1px;
+  margin-top: -10px;
   /* height: 100vh; */
   position: relative;
   &.mobile-wrapper {
@@ -39,13 +39,13 @@ const MenuWrapper = styled.div`
 
 const frameInAnimation = keyframes`
   0% {
-    font-size: 50px;
-    line-height: 125%;
+    font-size: 60px;
+    line-height: 128%;
   }
 
   100%{
-    font-size: 100px;
-    line-height: 125%;
+    font-size: 110px;
+    line-height: 128%;
   }
 `;
 
@@ -56,10 +56,9 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
-  font-size: 1px;
   font-style: normal;
   font-weight: 100;
-  line-height: 125%;
+  line-height: 128%;
   font-size: 0px;
   &.frame-in {
     animation: ${frameInAnimation} 0.8s forwards;
@@ -231,7 +230,7 @@ const Home = () => {
               height="100%"
               loop={true}
               muted
-              className={isMobile ? "mobile-video" : ""}
+              className={isMobile ? "mobile-video" : "video"}
             />
           ) : (
             <Mintro src={mintro} />
