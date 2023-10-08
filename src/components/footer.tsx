@@ -4,7 +4,7 @@ import logo from "../assets/univ_logo.png";
 
 const FooterWrapper = styled.div`
   background-color: #ffffff;
-  padding: 45px 30px;
+  padding: 35px 30px;
   height: 70px;
   display: flex;
   flex-direction: column;
