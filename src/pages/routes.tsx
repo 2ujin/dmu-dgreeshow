@@ -4,10 +4,12 @@ import Home from "./home";
 import Intro from "./intro";
 import Profile from "./profile";
 import Event from "./event";
+import ScrollTop from "../components/scrollToTop";
 
 const RoutesComponent = () => {
   return (
     <BrowserRouter>
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/intro" element={<Intro />} />

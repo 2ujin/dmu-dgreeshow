@@ -2,7 +2,7 @@
   "name": "yisol-dmu-gx",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://2ujin.github.io/yisol-dmu-gx",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -21,6 +21,7 @@
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "react-typist": "^2.0.5",
+    "serve": "^14.2.1",
     "styled-components": "^6.0.7",
     "styled-reset": "^4.5.1",
     "typescript": "^4.9.5",
