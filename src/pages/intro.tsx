@@ -358,7 +358,7 @@ const MIntroBottomWrapper = styled.div`
 
     .people-wrapper {
       display: flex;
-      width: 80%;
+      width: 85%;
       margin-left: 25px;
       padding: 20px;
       justify-content: flex-start;
