@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Header from "../components/header";
 import bg from "../assets/student_bg.svg";
 import logo from "../assets/student_logo.svg";
-import test from "../assets/profile/최이솔.jpg";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import Footer from "../components/footer";
@@ -261,7 +260,7 @@ const Profile = () => {
               <StudentImage
                 className={isMobile ? "s-mobile" : ""}
                 loading="lazy"
-                src={`${process.env.PUBLIC_URL}/profile/${name}.jpg`}
+                src={require(`../assets/profile/${name}.jpg`)}
               />
               <span>{name.replace(/[0-9 ]/gim, "")}</span>
             </Student>
