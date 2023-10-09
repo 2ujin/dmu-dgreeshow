@@ -10,6 +10,7 @@ import mintro from "../assets/m-intro.png";
 import mbg from "../assets/m-bg.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import introBottom from "../assets/intro_bottom.png";
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -23,7 +24,7 @@ const ContentWrapper = styled.div`
   );
   width: 100%;
   overflow-x: hidden;
-  height: 4000px;
+  height: 3942px;
 `;
 
 const Text = styled.div`
@@ -280,6 +281,15 @@ const MPoster = styled.img`
   z-index: 998;
 `;
 
+const BottomWrapper = styled.div`
+  margin-top: 1600px;
+  position: relative;
+`;
+
+const IntroBottom = styled.img`
+  width: 100%;
+`;
+
 const Intro = () => {
   // const animatedItem: any = useScrollFadeIn("up", 1, 0);
   // const animatedItem2: any = useScrollFadeIn("right", 1, 0);
@@ -372,6 +382,9 @@ const Intro = () => {
                 {/* <Box2 src={box2} /> */}
               </Box2Wrapper>
             </PostWrapper>
+            <BottomWrapper>
+              <IntroBottom src={introBottom} />
+            </BottomWrapper>
           </ContentWrapper>
 
           <Footer />
