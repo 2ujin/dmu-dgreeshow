@@ -152,7 +152,7 @@ const MDesc = styled.div`
   text-align: justify;
   font-size: 13px;
   font-weight: 500;
-  line-height: 251.8%; /* 60.432px */
+  line-height: 24px;
   letter-spacing: 1.32px;
   padding: 0 17px;
   margin-top: 10px;
@@ -192,10 +192,10 @@ const Opening = styled.div`
 
   &.m-intro {
     position: relative;
-    top: 0;
+    top: 10px;
     left: 0;
     font-size: 16px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 14px;
   }
 `;
@@ -251,9 +251,9 @@ const Map = styled.img`
 
   &.m-intro {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 380px;
+    top: -30px;
+    left: 20px;
+    width: 90%;
   }
 `;
 
@@ -276,7 +276,7 @@ const MPoster = styled.img`
   width: 350px;
   position: absolute;
   top: 35px;
-  left: 40px;
+  left: 23px;
   z-index: 998;
 `;
 

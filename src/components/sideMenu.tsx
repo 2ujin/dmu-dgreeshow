@@ -40,6 +40,10 @@ const TextWrapper = styled.div`
   font-weight: 700;
   line-height: 116.467%;
   width: 100%;
+
+  &.small {
+    font-size: 15px;
+  }
 `;
 
 const TextShortWrapper = styled.div`
@@ -52,6 +56,9 @@ const TextShortWrapper = styled.div`
   line-height: 116.467%;
   width: 80%;
   justify-content: right;
+  &.small {
+    font-size: 15px;
+  }
 `;
 
 const SnsWrapper = styled.div`
@@ -61,6 +68,8 @@ const SnsWrapper = styled.div`
   line-height: 22px;
   padding-right: 10px;
   font-size: 14px;
+  position: absolute;
+  bottom: 60px;
 `;
 
 const SideMenu = (props: { data: any; state: any; closeModal: any }) => {
@@ -79,10 +88,14 @@ const SideMenu = (props: { data: any; state: any; closeModal: any }) => {
         <TextWrapper onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
           project
         </TextWrapper>
-        <TextWrapper onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
+        <TextWrapper
+          className="small"
+          onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
+        >
           복합공간설계
         </TextWrapper>
         <TextShortWrapper
+          className="small"
           onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
         >
           가구디자인

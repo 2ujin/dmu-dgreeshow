@@ -63,6 +63,7 @@ const Text = styled.div`
   &.w-mobile {
     margin-left: 0px;
     font-size: 28px;
+    margin-top: 10px;
   }
 `;
 

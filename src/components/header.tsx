@@ -21,7 +21,7 @@ const HeaderWrapper = styled.div`
   right: 0;
   z-index: 999;
   &.mobile {
-    padding: 30px;
+    padding: 25px;
   }
 `;
 
@@ -46,7 +46,7 @@ const Logo = styled.img`
   &.mobile-logo {
     width: 40px;
     left: 15px;
-    top: 8px;
+    top: 5px;
   }
 `;
 
@@ -61,11 +61,12 @@ const MText = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 12px;
+  font-size: 9px;
   text-align: center;
   color: #984678;
   font-weight: 600;
-  line-height: 13px;
+  line-height: 10px;
+  margin-left: 4px;
 `;
 
 const Header = () => {
