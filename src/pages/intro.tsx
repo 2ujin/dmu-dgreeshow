@@ -10,7 +10,17 @@ import mintro from "../assets/m-intro.png";
 import mbg from "../assets/m-bg.svg";
 import { useState, useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-import introBottom from "../assets/intro_bottom.png";
+import introBottom from "../assets/intro/intro_bg.png";
+import edit_box from "../assets/intro/edit-box.png";
+import video_box from "../assets/intro/video-box.png";
+import general_box from "../assets/intro/general-box.png";
+import event_box from "../assets/intro/event-box.png";
+import web_box from "../assets/intro/web-box.png";
+import edit_hover from "../assets/intro/edit-hover.png";
+import video_hover from "../assets/intro/video-hover.png";
+import general_hover from "../assets/intro/general-hover.png";
+import event_hover from "../assets/intro/event-hover.png";
+import web_hover from "../assets/intro/web-hover.png";
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -288,6 +298,192 @@ const BottomWrapper = styled.div`
 
 const IntroBottom = styled.img`
   width: 100%;
+  position: relative;
+`;
+
+const MIntroBottomWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 65px;
+
+  .title-2 {
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1.26px;
+  }
+
+  .items {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .item-title {
+        font-size: 16px;
+        color: #fff;
+      }
+
+      .item-content {
+        margin-top: 17px;
+        font-size: 10px;
+        color: #fff;
+      }
+
+      &.left {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .peoples {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 45px;
+
+    .people-wrapper {
+      display: flex;
+      width: 80%;
+      margin-left: 25px;
+      padding: 20px;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 10px;
+
+      .people-title {
+        color: #fff;
+        font-size: 15px;
+        margin-right: 20px;
+      }
+
+      .people-name {
+        color: #fff;
+        font-size: 15px;
+        margin-left: 25px;
+        font-weight: 700;
+
+        .special {
+          display: flex;
+          align-items: center;
+          &.top {
+            margin-top: 6px;
+          }
+          span {
+            /* flex: 1; */
+            text-align: left;
+            font-size: 11px;
+            font-weight: 300;
+          }
+          div {
+            text-align: left;
+            flex: 1;
+            margin-left: 10px;
+
+            &.dd {
+              margin-left: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+const Box1 = styled.img`
+  position: absolute;
+  left: 90px;
+  bottom: 305px;
+  width: 490px;
+  z-index: 998;
+  transition: 0.2s all;
+`;
+
+const Box2 = styled.img`
+  position: absolute;
+  left: 440px;
+  bottom: 500px;
+  width: 390px;
+  z-index: 998;
+`;
+
+const Box3 = styled.img`
+  position: absolute;
+  left: 690px;
+  bottom: 185px;
+  width: 370px;
+  z-index: 998;
+`;
+
+const Box4 = styled.img`
+  position: absolute;
+  left: 810px;
+  bottom: 433px;
+  width: 370px;
+  z-index: 998;
+`;
+
+const Box5 = styled.img`
+  position: absolute;
+  right: 90px;
+  bottom: 249px;
+  width: 491px;
+  z-index: 998;
+`;
+
+const Box1Hover = styled.img`
+  position: absolute;
+  left: 150px;
+  bottom: 345px;
+  width: 350px;
+  z-index: 999;
+  transition: 0.2s all;
+`;
+
+const Box2Hover = styled.img`
+  position: absolute;
+  left: 480px;
+  bottom: 560px;
+  width: 300px;
+  z-index: 999;
+`;
+
+const Box3Hover = styled.img`
+  position: absolute;
+  left: 730px;
+  bottom: 250px;
+  width: 240px;
+  z-index: 999;
+`;
+
+const Box4Hover = styled.img`
+  position: absolute;
+  left: 860px;
+  bottom: 490px;
+  width: 300px;
+  z-index: 999;
+`;
+
+const Box5Hover = styled.img`
+  position: absolute;
+  right: 180px;
+  bottom: 310px;
+  width: 300px;
+  z-index: 999;
 `;
 
 const Intro = () => {
@@ -327,6 +523,11 @@ const Intro = () => {
   }, []);
 
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
+  const [box1Hovered, setBox1Hovered] = useState(false);
+  const [box2Hovered, setBox2Hovered] = useState(false);
+  const [box3Hovered, setBox3Hovered] = useState(false);
+  const [box4Hovered, setBox4Hovered] = useState(false);
+  const [box5Hovered, setBox5Hovered] = useState(false);
 
   return (
     <>
@@ -383,6 +584,50 @@ const Intro = () => {
               </Box2Wrapper>
             </PostWrapper>
             <BottomWrapper>
+              <div
+                className="boxes"
+                onMouseEnter={() => setBox1Hovered(true)}
+                onMouseLeave={() => setBox1Hovered(false)}
+              >
+                <Box1 src={edit_box} />
+                {box1Hovered && <Box1Hover src={edit_hover} />}
+              </div>
+              <div
+                className="boxes"
+                onMouseEnter={() => setBox2Hovered(true)}
+                onMouseLeave={() => setBox2Hovered(false)}
+              >
+                <Box2 src={video_box} />
+                {box2Hovered && <Box2Hover src={video_hover} />}
+              </div>
+
+              <div
+                className="boxes"
+                onMouseEnter={() => setBox3Hovered(true)}
+                onMouseLeave={() => setBox3Hovered(false)}
+              >
+                <Box3 src={general_box} />
+                {box3Hovered && <Box3Hover src={general_hover} />}
+              </div>
+
+              <div
+                className="boxes"
+                onMouseEnter={() => setBox4Hovered(true)}
+                onMouseLeave={() => setBox4Hovered(false)}
+              >
+                <Box4 src={event_box} />
+                {box4Hovered && <Box4Hover src={event_hover} />}
+              </div>
+
+              <div
+                className="boxes"
+                onMouseEnter={() => setBox5Hovered(true)}
+                onMouseLeave={() => setBox5Hovered(false)}
+              >
+                <Box5 src={web_box} />
+                {box5Hovered && <Box5Hover src={web_hover} />}
+              </div>
+
               <IntroBottom src={introBottom} />
             </BottomWrapper>
           </ContentWrapper>
@@ -430,6 +675,56 @@ const Intro = () => {
             <a href="https://naver.me/GkKrYVUz" target="_blank">
               <Map src={map} className={isMobile ? "m-intro" : ""} />
             </a>
+
+            <MIntroBottomWrapper>
+              <div className="title-2">교수진 / 졸업준비위원회 소개</div>
+              <div className="items">
+                <div className="item left">
+                  <div className="item-title">설계 디자인</div>
+                  <div className="item-content">
+                    조성오 교수님, 김기범 교수님, 문보경 교수님
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="item-title">가구 디자인</div>
+                  <div className="item-content">
+                    이미경 교수님, 이은경 교수님
+                  </div>
+                </div>
+              </div>
+              <div className="peoples">
+                <div className="people-wrapper">
+                  <div className="people-title">총괄팀</div>
+                  <div className="people-name">김애린, 김은호, 박윤하</div>
+                </div>
+                <div className="people-wrapper">
+                  <div className="people-title">편집팀</div>
+                  <div className="people-name">
+                    김다은, 이예진, 이도헌, 윤혜린
+                  </div>
+                </div>
+                <div className="people-wrapper">
+                  <div className="people-title">영상팀</div>
+                  <div className="people-name">김시후, 성수진, 전승욱</div>
+                </div>
+                <div className="people-wrapper">
+                  <div className="people-title">행사팀</div>
+                  <div className="people-name">박윤하, 김보희, 조예나</div>
+                </div>
+                <div className="people-wrapper">
+                  <div className="people-title">홍보팀</div>
+                  <div className="people-name">
+                    <div className="special">
+                      <span>웹 디자인</span> <div>최이솔</div>
+                    </div>
+                    <div className="special top">
+                      <span>인스타</span>{" "}
+                      <div className="dd">강다현, 김소영</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </MIntroBottomWrapper>
           </ContentWrapper>
         </>
       )}
