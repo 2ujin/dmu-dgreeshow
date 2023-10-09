@@ -8,10 +8,10 @@ function App(): JSX.Element {
   return (
     <>
       <Globalstyle />
-      <Router>
-        <ScrollTop />
-        <RoutesComponent />
-      </Router>
+      {/* <Router> */}
+      {/* <ScrollTop /> */}
+      <RoutesComponent />
+      {/* </Router> */}
     </>
   );
 }
