@@ -38,21 +38,24 @@ const ContentWrapper = styled.div`
 `;
 
 const Text = styled.div`
-  color: #52223f;
+  color: #ffff;
   font-size: 65px;
-  font-weight: 700;
+  font-weight: 100;
   letter-spacing: 7.5px;
   width: 13ch;
   animation: typing 1s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
+  font-family: "PyeongChangPeace" !important;
 
   position: absolute;
   right: 73px;
   top: 58px;
   b {
-    color: #f28542;
+    font-family: "PyeongChangPeace" !important;
+    font-weight: 700;
+    color: rgba(242, 133, 66, 0.9);
   }
 `;
 
@@ -563,7 +566,7 @@ const Intro = () => {
                 <Line4 />
               </div>
               <Text>
-                <b>공간</b>에는 <b>힘이</b> 있다
+                <b>공간</b>에는 <b>힘</b>이 있다
               </Text>
               <SubText>空間力 ; 공간력</SubText>
 
