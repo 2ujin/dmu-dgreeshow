@@ -91,6 +91,10 @@ const Header = () => {
     setModalState(false);
   };
 
+  const handleSubHeaderMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
   return (
     <HeaderWrapper className={isMobile ? "mobile" : "web"}>
       <Link to="/">
@@ -129,11 +133,18 @@ const Header = () => {
           <div
             onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
             onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
             className="header-text before-open"
           >
             PROJECT
-            {isDropdownVisible && <SubHeader />}
+            {isDropdownVisible && (
+              <div
+                className="subheader"
+                onMouseEnter={handleSubHeaderMouseEnter} // SubHeader 위에 마우스를 가져갈 때
+                onMouseLeave={handleMouseLeave}
+              >
+                <SubHeader />
+              </div>
+            )}
           </div>
           <NavLink
             className={({ isActive }) =>

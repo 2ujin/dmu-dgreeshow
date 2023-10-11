@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import "../App.css";
 
@@ -23,16 +24,24 @@ const SubItem = styled.div`
 
 const SubHeader = () => {
   return (
-    // <SubHeaderWrapper>
-    //   <SubItem>복합공간설계</SubItem>
-    //   <SubItem>가구디자인</SubItem>
-    //   <SubItem>코디네이션</SubItem>
-    // </SubHeaderWrapper>
     <div className="dropdown-menu">
       <ul>
-        <li>복합공간설계</li>
-        <li>가구디자인</li>
-        {/* <li>코디네이션</li> */}
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "header-text"
+          }
+          to="/design"
+        >
+          <li> 복합공간설계</li>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "link-active" : "header-text"
+          }
+          to="/furniture"
+        >
+          <li>가구디자인</li>
+        </NavLink>
       </ul>
     </div>
   );
