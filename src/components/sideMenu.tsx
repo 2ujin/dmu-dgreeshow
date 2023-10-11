@@ -73,7 +73,7 @@ const SnsWrapper = styled.div`
 `;
 
 const SideMenu = (props: { data: any; state: any; closeModal: any }) => {
-  const { data, state, closeModal } = props;
+  const { state, closeModal } = props;
 
   return state ? (
     <>

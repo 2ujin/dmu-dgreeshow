@@ -2,7 +2,6 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import test from "../assets/test.png";
 
 const Wrapper = styled.div`
   width: 100%;
