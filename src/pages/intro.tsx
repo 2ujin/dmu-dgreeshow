@@ -580,7 +580,7 @@ const Intro = () => {
                     동양미래대학교 8-1F <br />| 6DM GALLERY
                   </Where>
                 </div>
-                <a href="https://naver.me/GkKrYVUz" target="_blank">
+                <a href="https://naver.me/xpWi0evQ" target="_blank">
                   <Map src={map} />
                 </a>
                 {/* <Box2 src={box2} /> */}
@@ -675,7 +675,7 @@ const Intro = () => {
               </div>
             </MDesc>
 
-            <a href="https://naver.me/GkKrYVUz" target="_blank">
+            <a href="https://naver.me/xpWi0evQ" target="_blank">
               <Map src={map} className={isMobile ? "m-intro" : ""} />
             </a>
 

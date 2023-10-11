@@ -112,9 +112,18 @@ const SideMenu = (props: { data: any; state: any; closeModal: any }) => {
 
         <SnsWrapper>
           instagram <br />
-          @dmu_dgreeshow <br />
+          <a
+            href="https://instagram.com/dmu_degreeshow?igshid=MzRlODBiNWFlZA=="
+            target="_blank"
+          >
+            @dmu_degreeshow
+          </a>
           <br />
-          youtube
+          <br />
+          youtube <br />
+          <a href="https://www.youtube.com/@dmushow7083" target="_blank">
+            @dmushow7083
+          </a>
         </SnsWrapper>
       </ModalWrapper>
     </>

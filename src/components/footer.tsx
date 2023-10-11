@@ -82,8 +82,19 @@ const Footer = ({ isLine = false }) => {
                 Gallery&nbsp;&nbsp;&nbsp;&nbsp;②&nbsp;&nbsp;&nbsp;&nbsp;08221
                 서울시 구로구 경인로 445 ([구]고척동 62-160) 동양미래대학교
               </Text>
-              <Text> Instagram @dmu_dgreeshow</Text>
-              <Text> Youtube @dmushow7083</Text>
+              <Text>
+                <a
+                  href="https://instagram.com/dmu_degreeshow?igshid=MzRlODBiNWFlZA=="
+                  target="_blank"
+                >
+                  Instagram @dmu_degreeshow
+                </a>
+              </Text>
+              <Text>
+                <a href="https://www.youtube.com/@dmushow7083" target="_blank">
+                  Youtube @dmushow7083
+                </a>
+              </Text>
             </TextWrapper>
             <Img src={logo}></Img>
           </TextImgWrapper>
@@ -98,8 +109,20 @@ const Footer = ({ isLine = false }) => {
               ② 08221 서울시 구로구 경인로 445 ([구]고척동 62-160)
               동양미래대학교
             </MText>
-            <MText> Instagram &nbsp;&nbsp;@dmu_dgreeshow</MText>
-            <MText> Youtube @dmushow7083</MText>
+            <MText>
+              <a
+                href="https://instagram.com/dmu_degreeshow?igshid=MzRlODBiNWFlZA=="
+                target="_blank"
+              >
+                Instagram &nbsp;&nbsp;@dmu_dgreeshow
+              </a>
+            </MText>
+            <MText>
+              {" "}
+              <a href="https://www.youtube.com/@dmushow7083" target="_blank">
+                Youtube &nbsp;&nbsp;&nbsp;&nbsp;@dmushow7083
+              </a>
+            </MText>
           </MTextWrapper>
         </MFooterWrapper>
       )}
