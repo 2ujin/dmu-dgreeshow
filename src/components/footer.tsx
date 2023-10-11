@@ -83,7 +83,7 @@ const Footer = ({ isLine = false }) => {
                 서울시 구로구 경인로 445 ([구]고척동 62-160) 동양미래대학교
               </Text>
               <Text> Instagram @dmu_dgreeshow</Text>
-              <Text> Youtube 채널명</Text>
+              <Text> Youtube @dmushow7083</Text>
             </TextWrapper>
             <Img src={logo}></Img>
           </TextImgWrapper>
@@ -99,7 +99,7 @@ const Footer = ({ isLine = false }) => {
               동양미래대학교
             </MText>
             <MText> Instagram &nbsp;&nbsp;@dmu_dgreeshow</MText>
-            <MText> Youtube 채널명</MText>
+            <MText> Youtube @dmushow7083</MText>
           </MTextWrapper>
         </MFooterWrapper>
       )}
