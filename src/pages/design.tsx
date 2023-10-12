@@ -49,7 +49,7 @@ const moveLeftAnimation = keyframes`
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* 왼쪽으로 이동 */
+    transform: translateX(-100%); 
   }
 `;
 
@@ -87,7 +87,7 @@ const Design = () => {
         </TitleWrapper>
 
         <RowsWrapper className="right">
-          {test.map((_) => (
+          {test.map((item) => (
             <Img />
           ))}
         </RowsWrapper>
