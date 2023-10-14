@@ -5,6 +5,9 @@ import Intro from "./intro";
 import Profile from "./profile";
 import Event from "./event";
 import ScrollTop from "../components/scrollToTop";
+import Design from "./design";
+import Furniture from "./furniture";
+import DesignDetail from "./designDetail";
 
 const RoutesComponent = () => {
   return (
@@ -15,6 +18,9 @@ const RoutesComponent = () => {
         <Route path="/intro" element={<Intro />} />
         <Route path="/event" element={<Event />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/design1234" element={<Design />} />
+        <Route path="/design-detail/:team" element={<DesignDetail />} />
+        <Route path="/furniture1234" element={<Furniture />} />
       </Routes>
     </BrowserRouter>
   );

@@ -3,7 +3,6 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import poster from "../assets/poster.png";
 import box from "../assets/box.svg";
-import box2 from "../assets/box2.svg";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
 import map from "../assets/map.png";
 import mintro from "../assets/m-intro.png";
