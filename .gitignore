@@ -24,3 +24,7 @@ yarn-error.log*
 
 .env
 /src/team.json
+/public/projectAll
+
+/src/assets/thumbnailDesign
+/src/assets/thumbnailFurniture

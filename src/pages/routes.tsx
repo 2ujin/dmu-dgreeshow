@@ -8,6 +8,7 @@ import ScrollTop from "../components/scrollToTop";
 import Design from "./design";
 import Furniture from "./furniture";
 import DesignDetail from "./designDetail";
+import FurnitureDetail from "./furnitureDetail";
 
 const RoutesComponent = () => {
   return (
@@ -19,8 +20,9 @@ const RoutesComponent = () => {
         <Route path="/event" element={<Event />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/design1234" element={<Design />} />
-        <Route path="/design-detail/:team" element={<DesignDetail />} />
+        <Route path="/design-detail/:index" element={<DesignDetail />} />
         <Route path="/furniture1234" element={<Furniture />} />
+        <Route path="/furniture-detail/:index" element={<FurnitureDetail />} />
       </Routes>
     </BrowserRouter>
   );
