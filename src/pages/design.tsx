@@ -3,6 +3,8 @@ import styled, { keyframes } from "styled-components";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import logo from "../assets/design_logo.svg";
+import team from "../team.json";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -46,10 +48,10 @@ const moveAnimation = keyframes`
 
 const moveLeftAnimation = keyframes`
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0);
   }
   100% {
-    transform: translateX(-100%); 
+    transform: translate3d(-100%, 0, 0);
   }
 `;
 
@@ -59,24 +61,44 @@ const RowsWrapper = styled.div`
   margin-top: 35px;
 
   &.right {
-    animation: ${moveAnimation} 200s linear infinite;
+    animation: ${moveAnimation} 130s linear infinite;
   }
   &.left {
-    animation: ${moveLeftAnimation} 200s linear infinite;
+    animation: ${moveLeftAnimation} 130s linear infinite;
   }
 `;
 
-const Img = styled.div`
+const Img = styled.img`
   width: 250px;
   height: 250px;
-  background-color: #e2e2e2;
   margin-left: 27px;
 `;
 
 const Design = () => {
+  const navigate = useNavigate();
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
-  let test = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  test = [...test, ...test, ...test, ...test];
+  let result = [];
+  for (let i = 0; i < team.design.length; i += 6) {
+    let temp;
+    temp = team.design.slice(i, i + 6);
+    result.push(temp);
+  }
+
+  const last: any = result.pop();
+  result[result.length - 1].push(...last);
+
+  for (let item of result) {
+    const cloned = [
+      ...item,
+      ...item,
+      ...item,
+      ...item,
+      ...item,
+      ...item,
+      ...item,
+    ];
+    item = cloned;
+  }
 
   return (
     <>
@@ -87,35 +109,39 @@ const Design = () => {
         </TitleWrapper>
 
         <RowsWrapper className="right">
-          {test.map((item) => (
-            <Img />
+          {result[0].map((name, index) => (
+            <Img
+              onClick={() => navigate(`/design-detail/${name}`)}
+              key={index}
+              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
+            />
           ))}
         </RowsWrapper>
 
         <RowsWrapper className="left">
-          {test.map((_) => (
-            <Img />
+          {result[0].map((name) => (
+            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
           ))}
         </RowsWrapper>
 
         <RowsWrapper className="right">
-          {test.map((_) => (
-            <Img />
+          {result[0].map((name) => (
+            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
           ))}
         </RowsWrapper>
         <RowsWrapper className="left">
-          {test.map((_) => (
-            <Img />
+          {result[0].map((name) => (
+            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
           ))}
         </RowsWrapper>
         <RowsWrapper className="right">
-          {test.map((_) => (
-            <Img />
+          {result[0].map((name) => (
+            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
           ))}
         </RowsWrapper>
         <RowsWrapper className="left">
-          {test.map((_) => (
-            <Img />
+          {result[0].map((name) => (
+            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
           ))}
         </RowsWrapper>
       </Wrapper>
