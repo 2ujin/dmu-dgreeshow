@@ -18,9 +18,9 @@ const RoutesComponent = () => {
         <Route path="/intro" element={<Intro />} />
         <Route path="/event" element={<Event />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/design" element={<Design />} />
+        <Route path="/design1234" element={<Design />} />
         <Route path="/design-detail/:team" element={<DesignDetail />} />
-        <Route path="/furniture" element={<Furniture />} />
+        <Route path="/furniture1234" element={<Furniture />} />
       </Routes>
     </BrowserRouter>
   );

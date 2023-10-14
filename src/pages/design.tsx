@@ -61,10 +61,10 @@ const RowsWrapper = styled.div`
   margin-top: 35px;
 
   &.right {
-    animation: ${moveAnimation} 130s linear infinite;
+    animation: ${moveAnimation} 300s linear infinite;
   }
   &.left {
-    animation: ${moveLeftAnimation} 130s linear infinite;
+    animation: ${moveLeftAnimation} 300s linear infinite;
   }
 `;
 
@@ -72,6 +72,11 @@ const Img = styled.img`
   width: 250px;
   height: 250px;
   margin-left: 27px;
+
+  &:hover {
+    cursor: pointer;
+    transform: rotate(-8deg);
+  }
 `;
 
 const Design = () => {
@@ -87,17 +92,14 @@ const Design = () => {
   const last: any = result.pop();
   result[result.length - 1].push(...last);
 
-  for (let item of result) {
-    const cloned = [
-      ...item,
-      ...item,
-      ...item,
-      ...item,
-      ...item,
-      ...item,
-      ...item,
+  for (let i = 0; i < result.length; i++) {
+    result[i] = [
+      ...result[i],
+      ...result[i],
+      ...result[i],
+      ...result[i],
+      ...result[i],
     ];
-    item = cloned;
   }
 
   return (
@@ -119,31 +121,40 @@ const Design = () => {
         </RowsWrapper>
 
         <RowsWrapper className="left">
-          {result[0].map((name) => (
-            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
+          {result[1].map((name) => (
+            <Img
+              onClick={() => navigate(`/design-detail/${name}`)}
+              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
+            />
           ))}
         </RowsWrapper>
 
         <RowsWrapper className="right">
-          {result[0].map((name) => (
+          {result[2].map((name) => (
+            <Img
+              onClick={() => navigate(`/design-detail/${name}`)}
+              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
+            />
+          ))}
+        </RowsWrapper>
+        <RowsWrapper className="left">
+          {result[3].map((name) => (
+            <Img
+              onClick={() => navigate(`/design-detail/${name}`)}
+              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
+            />
+          ))}
+        </RowsWrapper>
+        {/* <RowsWrapper className="right">
+          {result[4].map((name) => (
             <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
           ))}
         </RowsWrapper>
         <RowsWrapper className="left">
-          {result[0].map((name) => (
+          {result[5].map((name) => (
             <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
           ))}
-        </RowsWrapper>
-        <RowsWrapper className="right">
-          {result[0].map((name) => (
-            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
-          ))}
-        </RowsWrapper>
-        <RowsWrapper className="left">
-          {result[0].map((name) => (
-            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
-          ))}
-        </RowsWrapper>
+        </RowsWrapper> */}
       </Wrapper>
 
       <Footer isLine={true} />
