@@ -5,6 +5,7 @@ import Header from "../components/header";
 import logo from "../assets/design_logo.svg";
 import team from "../team.json";
 import { useNavigate } from "react-router-dom";
+import { Key } from "react";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -15,7 +16,8 @@ const Wrapper = styled.div`
   background-color: #f28542;
 
   &.w-mobile {
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    overflow-x: hidden;
   }
 `;
 
@@ -77,20 +79,37 @@ const Img = styled.img`
     cursor: pointer;
     transform: rotate(-8deg);
   }
+
+  &.i-mobile {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 const Design = () => {
   const navigate = useNavigate();
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
+
   let result = [];
-  for (let i = 0; i < team.design.length; i += 6) {
-    let temp;
-    temp = team.design.slice(i, i + 6);
-    result.push(temp);
+
+  if (isMobile) {
+    for (let i = 0; i < team.design.length; i += 4) {
+      let temp;
+      temp = team.design.slice(i, i + 4);
+      result.push(temp);
+    }
+  } else {
+    for (let i = 0; i < team.design.length; i += 6) {
+      let temp;
+      temp = team.design.slice(i, i + 6);
+      result.push(temp);
+    }
   }
 
+  console.log(team.design.length);
   const last: any = result.pop();
   result[result.length - 1].push(...last);
+  console.log(result);
 
   for (let i = 0; i < result.length; i++) {
     result[i] = [
@@ -110,51 +129,18 @@ const Design = () => {
           <Logo src={logo} />
         </TitleWrapper>
 
-        <RowsWrapper className="right">
-          {result[0].map((name, index) => (
-            <Img
-              onClick={() => navigate(`/design-detail/${name}`)}
-              key={index}
-              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
-            />
-          ))}
-        </RowsWrapper>
-
-        <RowsWrapper className="left">
-          {result[1].map((name) => (
-            <Img
-              onClick={() => navigate(`/design-detail/${name}`)}
-              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
-            />
-          ))}
-        </RowsWrapper>
-
-        <RowsWrapper className="right">
-          {result[2].map((name) => (
-            <Img
-              onClick={() => navigate(`/design-detail/${name}`)}
-              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
-            />
-          ))}
-        </RowsWrapper>
-        <RowsWrapper className="left">
-          {result[3].map((name) => (
-            <Img
-              onClick={() => navigate(`/design-detail/${name}`)}
-              src={require(`../assets/thumbnailDesign/${name}.jpg`)}
-            />
-          ))}
-        </RowsWrapper>
-        {/* <RowsWrapper className="right">
-          {result[4].map((name) => (
-            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
-          ))}
-        </RowsWrapper>
-        <RowsWrapper className="left">
-          {result[5].map((name) => (
-            <Img src={require(`../assets/thumbnailDesign/${name}.jpg`)} />
-          ))}
-        </RowsWrapper> */}
+        {result.map((arr, index) => (
+          <RowsWrapper className={index % 2 === 0 ? "right" : "left"}>
+            {arr.map((item: any) => (
+              <Img
+                className={isMobile ? "i-mobile" : ""}
+                onClick={() => navigate(`/design-detail/${item.index}`)}
+                key={item.index}
+                src={require(`../assets/thumbnailDesign/${item.thumb}.jpg`)}
+              />
+            ))}
+          </RowsWrapper>
+        ))}
       </Wrapper>
 
       <Footer isLine={true} />
