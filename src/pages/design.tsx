@@ -106,6 +106,7 @@ const Design = () => {
     }
   }
 
+  console.log(team.design.length);
   const last: any = result.pop();
   result[result.length - 1].push(...last);
   console.log(result);
