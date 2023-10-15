@@ -95,11 +95,7 @@ const DesignDetail = () => {
         />
         <TeamWrapper className={isMobile ? "t-mobile" : ""}>
           <Img
-<<<<<<< HEAD
             className={`team_img  ${isMobile ? "w-mobile" : ""}`}
-=======
-            className={`team_img ${isMobile ? "w-mobile" : ""}`}
->>>>>>> 163221a... feat: 앱 가구
             src={`${process.env.PUBLIC_URL}/projectAll/${data?.index}/profile.jpg`}
           />
           <div className={`teams ${isMobile ? "t-mobile" : ""}`}>
