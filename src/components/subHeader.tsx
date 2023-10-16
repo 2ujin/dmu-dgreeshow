@@ -5,22 +5,22 @@ const SubHeader = () => {
   return (
     <div className="dropdown-menu">
       <ul>
-        {/* <NavLink
+        <NavLink
           className={({ isActive }) =>
             isActive ? "link-active" : "header-text"
           }
           to="/design"
-        > */}
-        <li> 복합공간설계</li>
-        {/* </NavLink> */}
-        {/* <NavLink
+        >
+          <li> 복합공간설계</li>
+        </NavLink>
+        <NavLink
           className={({ isActive }) =>
             isActive ? "link-active" : "header-text"
           }
           to="/furniture"
-        > */}
-        <li>가구디자인</li>
-        {/* </NavLink> */}
+        >
+          <li>가구디자인</li>
+        </NavLink>
       </ul>
     </div>
   );

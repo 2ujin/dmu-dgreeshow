@@ -8,6 +8,7 @@ import mbox from "../assets/m-box.svg";
 import mbox2 from "../assets/m-box2.svg";
 import mintro from "../assets/mintro.gif";
 import useScrollFadeIn from "../hooks/useScrollFadeIn";
+import { NavLink } from "react-router-dom";
 
 const HomeWrapper = styled.div`
   height: 100%;
@@ -248,26 +249,27 @@ const Home = () => {
                 <div className="box1-line-bottom"></div>
               </div>
               <div className="box-left-wrapper">
-                <div
-                  onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
-                  className={`box2 before-open ${
-                    isHoveredLeft ? "hovered" : ""
-                  }`}
-                  onMouseEnter={() => {
-                    setIsHoveredLeft(true);
-                    changeLeftLineStyle();
-                  }}
-                  onMouseLeave={() => {
-                    setIsHoveredLeft(false);
-                    changeLeftLineStyle();
-                  }}
-                >
-                  <div className="box2-line-top"></div>
-                  <div className="box2-line-right"></div>
-                  <div className="box2-line-left"></div>
-                  <div className="box2-line-bottom"></div>
-                  <div className="box2-title">복합공간설계</div>
-                </div>
+                <NavLink to="/design">
+                  <div
+                    className={`box2 before-open ${
+                      isHoveredLeft ? "hovered" : ""
+                    }`}
+                    onMouseEnter={() => {
+                      setIsHoveredLeft(true);
+                      changeLeftLineStyle();
+                    }}
+                    onMouseLeave={() => {
+                      setIsHoveredLeft(false);
+                      changeLeftLineStyle();
+                    }}
+                  >
+                    <div className="box2-line-top"></div>
+                    <div className="box2-line-right"></div>
+                    <div className="box2-line-left"></div>
+                    <div className="box2-line-bottom"></div>
+                    <div className="box2-title">복합공간설계</div>
+                  </div>
+                </NavLink>
                 <div className={`box3 ${isHoveredLeft ? "hovered" : ""}`}>
                   <div className="box3-line-top"></div>
                   <div className="box3-line-right"></div>
@@ -276,26 +278,27 @@ const Home = () => {
               </div>
               <div className="box-right-wrapper">
                 <div className="box5"></div>
-                <div
-                  onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
-                  className={`box6 before-open ${
-                    isHoveredRight ? "hovered" : ""
-                  }`}
-                  onMouseEnter={() => {
-                    setIsHoveredRight(true);
-                    changeRightLineStyle(); // 호버 시 스타일 변경 함수 호출
-                  }}
-                  onMouseLeave={() => {
-                    setIsHoveredRight(false);
-                    changeRightLineStyle(); // 호버 해제 시 스타일 변경 함수 호출
-                  }}
-                >
-                  <div className="box6-title">가구디자인</div>
-                  <div className="box6-line-top"></div>
-                  <div className="box6-line-right"></div>
-                  <div className="box6-line-left"></div>
-                  <div className="box6-line-bottom"></div>
-                </div>
+                <NavLink to="/furniture">
+                  <div
+                    className={`box6 before-open ${
+                      isHoveredRight ? "hovered" : ""
+                    }`}
+                    onMouseEnter={() => {
+                      setIsHoveredRight(true);
+                      changeRightLineStyle(); // 호버 시 스타일 변경 함수 호출
+                    }}
+                    onMouseLeave={() => {
+                      setIsHoveredRight(false);
+                      changeRightLineStyle(); // 호버 해제 시 스타일 변경 함수 호출
+                    }}
+                  >
+                    <div className="box6-title">가구디자인</div>
+                    <div className="box6-line-top"></div>
+                    <div className="box6-line-right"></div>
+                    <div className="box6-line-left"></div>
+                    <div className="box6-line-bottom"></div>
+                  </div>
+                </NavLink>
                 <div className="box7"></div>
                 <div className="box8"></div>
               </div>
@@ -315,11 +318,11 @@ const Home = () => {
 
             <Box src={mbox} />
             <Box2 src={mbox2} />
-            <SubText onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
-              복합공간설계
+            <SubText>
+              <NavLink to="/design"> 복합공간설계</NavLink>
             </SubText>
-            <SubText2 onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}>
-              가구디자인
+            <SubText2>
+              <NavLink to="/furniture">가구디자인</NavLink>
             </SubText2>
           </MenuWrapper>
         )}

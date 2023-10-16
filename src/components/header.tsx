@@ -131,11 +131,17 @@ const Header = () => {
             PROFILE
           </NavLink>
           <div
-            onClick={() => alert("10월 16일 오픈 예정입니다~!~!!")}
             onMouseEnter={handleMouseEnter}
             className="header-text before-open"
           >
-            PROJECT
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "link-active" : "header-text"
+              }
+              to="/design"
+            >
+              PROJECT
+            </NavLink>
             {isDropdownVisible && (
               <div
                 className="subheader"

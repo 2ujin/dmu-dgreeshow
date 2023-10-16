@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 
 const Img = styled.img`
   width: 80%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   &.full {
     width: 100%;
@@ -54,8 +54,9 @@ const TeamWrapper = styled.div`
 
       .name {
         margin-top: 20px;
-        font-size: 25px;
+        font-size: 20px;
         margin-right: 10px;
+        font-family: "PyeongChangPeace" !important;
 
         &.t-mobile {
           font-size: 12px;
@@ -63,12 +64,12 @@ const TeamWrapper = styled.div`
       }
     }
     .team {
-      font-size: 50px;
+      font-size: 40px;
       font-weight: bold;
       font-family: "PyeongChangPeace" !important;
 
       &.t-mobile {
-        font-size: 18px;
+        font-size: 15px;
       }
     }
   }
