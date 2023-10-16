@@ -47,7 +47,7 @@ const FloorWrapper = styled.div`
 
 const FloorImg = styled.div`
   width: 1390px;
-  height: 100%;
+  height: 670px;
   position: relative;
 `;
 
@@ -88,31 +88,31 @@ const Box = styled.img`
   }
   &.box3 {
     left: 85%;
-    top: 195px;
+    top: 190px;
   }
   &.box4 {
     left: 85%;
-    top: 245px;
+    top: 238px;
   }
   &.box5 {
     left: 85%;
-    top: 305px;
+    top: 285px;
   }
   &.box6 {
     left: 85%;
-    top: 355px;
+    top: 345px;
   }
   &.box7 {
     left: 85%;
-    top: 405px;
+    top: 390px;
   }
   &.box8 {
     left: 85%;
-    top: 460px;
+    top: 450px;
   }
   &.box9 {
     left: 85%;
-    top: 535px;
+    top: 515px;
   }
 
   &.box10 {

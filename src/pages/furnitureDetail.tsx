@@ -104,7 +104,9 @@ const FurnitureDetail = () => {
                 src={require(`../assets/profile/${name}.jpg`)}
                 className={`student ${isMobile ? "t-mobile" : ""}`}
               />
-              <div className={`name ${isMobile ? "t-mobile" : ""}`}>{name}</div>
+              <div className={`name ${isMobile ? "t-mobile" : ""}`}>
+                {name.replace(/[0-9 ]/gim, "")}
+              </div>
             </Wrap>
           ))}
         </TeamWrapper>
