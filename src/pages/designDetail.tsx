@@ -4,9 +4,11 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import team from "../team.json";
 import { useLocation, useParams } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,6 +84,19 @@ const TeamWrapper = styled.div`
   }
 `;
 
+const Player = styled.div`
+  width: 80%;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  height: 800px;
+
+  &.mobile {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    height: auto;
+  }
+`;
+
 const DesignDetail = () => {
   const { index } = useParams();
   const data = team.design[Number(index) - 1];
@@ -133,6 +148,10 @@ const DesignDetail = () => {
           }}
           src={`${process.env.PUBLIC_URL}/projectAll/${data?.index}/design/6.jpg`}
         />
+
+        <Player className={isMobile ? "mobile" : ""}>
+          <ReactPlayer width="100%" height="100%" url={data.link} />
+        </Player>
       </Wrapper>
       {/* <Footer /> */}
     </>
