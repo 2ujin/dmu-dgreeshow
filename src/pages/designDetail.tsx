@@ -109,7 +109,7 @@ const DesignDetail = () => {
                   className={`name ${isMobile ? "t-mobile" : ""}`}
                   key={index}
                 >
-                  {name}
+                  {name.replace(/[0-9 ]/gim, "")}
                 </div>
               ))}
             </div>
