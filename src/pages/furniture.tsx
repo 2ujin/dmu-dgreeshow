@@ -47,8 +47,11 @@ const FloorWrapper = styled.div`
 
 const FloorImg = styled.div`
   width: 1390px;
-  height: 670px;
   position: relative;
+
+  &.mobile {
+    height: 670px;
+  }
 `;
 
 const Floor = styled.img`
@@ -251,7 +254,7 @@ const Furniture = () => {
 
         {isMobile ? (
           <FloorWrapper>
-            <FloorImg>
+            <FloorImg className={isMobile ? "mobile" : ""}>
               <Floor className={isMobile ? "mobile" : ""} src={floor_m} />
               {team.furniture.map((item: any) => (
                 <Box
